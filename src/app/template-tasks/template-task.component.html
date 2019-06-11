@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" *ngFor="let task of test">
+                    <div class="card-header card-header-tabs card-header-success">
+                        <div class="task-title">
+                            <div><span class="nav-tabs-title">{{task.title}}</span></div>
+                            <div><img src="{{task.img}}"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" *ngFor="let select of task.variant">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-radio">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="{{task.name}}"
+                                                   value="{{select}}" (change)="getValue(task.name, select)">
+                                            {{select}}
+                                            <span class="circle">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button mat-raised-button class="btn btn-success pull-right btn-lg"
+                [disabled]="validBtn()" (click)="stopTest()">Завершити тест
+        </button>
+        <div class="clearfix"></div>
+    </div>
+</div>

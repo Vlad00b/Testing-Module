@@ -1,0 +1,19 @@
+.nav {
+    justify-content: space-evenly;
+}
+
+.user-name {
+    border-bottom: 1px solid #7b0c32;
+}
+
+.title-wrap {
+    display: flex;
+}
+
+.title-name {
+    margin-right: 15px;
+}
+
+.title-name h4 {
+    opacity: .5;
+}

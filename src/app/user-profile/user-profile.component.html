@@ -1,0 +1,133 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        <a mat-button class="nav-link active" href="#profile" data-toggle="tab">
+                                            <i class="material-icons">info</i> Інформація
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a mat-button class="nav-link" href="#edit-profile" data-toggle="tab">
+                                            <i class="material-icons">spellcheck</i> Редагування
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <div class="row">
+                                    <div class="card-body">
+                                        <div class="title-wrap user-name">
+                                            <div class="title-name">
+                                                <h3>{{userData.firstName}}</h3>
+                                            </div>
+
+                                            <div>
+                                                <h3>{{userData.lastName}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <div class="title-wrap">
+                                            <div class="title-name"><h4>Місто:</h4></div>
+                                            <div><h4>{{userData.city}}</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <div class="title-wrap">
+                                            <div class="title-name"><h4>Навчальний заклад:</h4></div>
+                                            <div><h4>{{userData.university}}</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <div class="title-wrap">
+                                            <div class="title-name"><h4>Email:</h4></div>
+                                            <div><h4>{{userData.email}}</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <div class="title-wrap">
+                                            <div class="title-name"><h4>Телефон:</h4></div>
+                                            <div><h4>{{userData.phone}}</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="edit-profile">
+                                <form [formGroup]="userInfo">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="firstName" placeholder="Ім'я"
+                                                       type="text">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="lastName" placeholder="Прізвище"
+                                                       type="text">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="city" placeholder="Місто"
+                                                       type="text">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="university"
+                                                       placeholder="Університет"
+                                                       type="text">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="email" placeholder="Email"
+                                                       type="email">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput formControlName="phone" placeholder="Телефон"
+                                                       type="tel">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <button mat-raised-button type="submit"
+                                            (click)="editProfile()" class="btn btn-danger pull-right">Оновити
+                                        профіль
+                                    </button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
