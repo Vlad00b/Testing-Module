@@ -1,5 +1,10 @@
 <div class="main-content">
-    <div class="container-fluid">
+    <mat-toolbar color="primary" class="fixed-top">
+        <mat-toolbar-row>
+            <span class="align-center">Custom Toolbar</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="container-fluid margin-container">
         <div class="row">
             <div class="col-md-12">
                 <div class="card" *ngFor="let task of test">
@@ -32,9 +37,11 @@
                 </div>
             </div>
         </div>
-        <button mat-raised-button class="btn btn-success pull-right btn-lg"
-                [disabled]="validBtn()" (click)="stopTest()">Завершити тест
-        </button>
+        <a routerLink="/tests" [ngStyle]="{'pointer-events': validBtn() ? 'none' : 'auto'}">
+            <button mat-raised-button class="btn btn-success pull-right btn-lg"
+                    [disabled]="validBtn()" (click)="stopTest()">Завершити тест
+            </button>
+        </a>
         <div class="clearfix"></div>
     </div>
 </div>

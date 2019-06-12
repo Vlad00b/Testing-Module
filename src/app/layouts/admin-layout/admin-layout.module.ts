@@ -3,14 +3,8 @@ import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AdminLayoutRoutes} from './admin-layout.routing';
-import {TestsComponent} from '../../tests/tests.component';
-import {UserProfileComponent} from '../../user-profile/user-profile.component';
-import {TableListComponent} from '../../table-list/table-list.component';
-import {IconsComponent} from '../../icons/icons.component';
-import {NotificationsComponent} from '../../notifications/notifications.component';
-import {TemplateTaskComponent} from '../../template-tasks/template-task.component';
-import {ModalWindowComponent} from '../../template-tasks/modal-window/modal-window.component';
-
+import {TestsComponent} from './tests/tests.component';
+import {UserProfileComponent} from './user-profile/user-profile.component';
 
 import {
     MatButtonModule,
@@ -21,7 +15,9 @@ import {
     MatSelectModule,
     MatDialogModule
 } from '@angular/material';
-import {CountService} from '../../services/count.service';
+import {TableListComponent} from './table-list/table-list.component';
+import {IconsComponent} from './icons/icons.component';
+import {NotificationsComponent} from './notifications/notifications.component';
 
 
 @NgModule({
@@ -44,14 +40,9 @@ import {CountService} from '../../services/count.service';
         TableListComponent,
         IconsComponent,
         NotificationsComponent,
-        TemplateTaskComponent,
-        ModalWindowComponent
-    ],
-    entryComponents: [
-        ModalWindowComponent
     ],
 
-    providers: [CountService]
+    providers: []
 })
 
 export class AdminLayoutModule {

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import test from '../../assets/json/test.json'
-import answer from '../../assets/json/test-answer.json'
+import test from '../../../../assets/json/test.json'
+import answer from '../../../../assets/json/test-answer.json'
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
-import {CountService} from '../services/count.service';
+import {CountService} from '../../../services/count.service';
 
 @Component({
     selector: 'app-template-task',
@@ -44,7 +44,6 @@ export class TemplateTaskComponent implements OnInit {
                 }
             }
         }
-        // console.log(this.userAnswer);
     }
 
     stopTest() {
@@ -63,7 +62,7 @@ export class TemplateTaskComponent implements OnInit {
     validBtn() {
         if (this.userAnswer.length !== this.answer.length) {
             return true;
-        }
+        } else return false
     }
 
     openDialog() {
