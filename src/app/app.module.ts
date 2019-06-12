@@ -23,6 +23,7 @@ import {
 import {CountService} from './services/count.service';
 import {TestsService} from './services/tests.service';
 import {TemplateResolveService} from './services/template-resolve.service';
+import {ServiceModule} from './services/service.module';
 
 @NgModule({
     imports: [
@@ -40,8 +41,10 @@ import {TemplateResolveService} from './services/template-resolve.service';
         MatTooltipModule,
         MatSelectModule,
         MatDialogModule,
-        MatToolbarModule
+        MatToolbarModule,
+        ServiceModule
     ],
+    exports: [ServiceModule],
     declarations: [
         AppComponent,
         AdminLayoutComponent,
@@ -51,7 +54,7 @@ import {TemplateResolveService} from './services/template-resolve.service';
     entryComponents: [
         ModalWindowComponent
     ],
-    providers: [CountService,TestsService, TemplateResolveService],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {

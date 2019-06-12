@@ -16,8 +16,8 @@ export class TemplateTaskComponent implements OnInit {
     test: any = {};
     answer: any = [];
     userAnswer: any = [];
+    evaluation: any = 0;
     counter: any = '';
-
     time: any = 300;
 
     constructor(public dialog: MatDialog,
@@ -71,11 +71,11 @@ export class TemplateTaskComponent implements OnInit {
         this.userAnswer.forEach(userAnswer => {
             this.answer.forEach(rightAnswer => {
                 if (userAnswer.name === rightAnswer.name && userAnswer.answer === rightAnswer.answer) {
-                    this.counter++;
+                    this.evaluation++
                 }
             })
         });
-        console.log(this.counter);
+        console.log(this.evaluation);
         this.openDialog();
         this.userAnswer = [];
     }
@@ -88,7 +88,7 @@ export class TemplateTaskComponent implements OnInit {
 
     openDialog() {
         const dialogConfig = new MatDialogConfig();
-        dialogConfig.data = this.countService.dataTest(this.counter);
+        dialogConfig.data = this.countService.dataTest(this.evaluation);
         this.dialog.open(ModalWindowComponent, dialogConfig);
     }
 }
