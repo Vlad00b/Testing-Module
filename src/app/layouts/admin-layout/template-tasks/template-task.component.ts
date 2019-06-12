@@ -4,6 +4,9 @@ import answer from '../../../../assets/json/test-answer.json'
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
 import {CountService} from '../../../services/count.service';
+import {BehaviorSubject} from 'rxjs';
+import * as moment from 'moment';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-template-task',
@@ -15,15 +18,34 @@ export class TemplateTaskComponent implements OnInit {
     test: any = {};
     answer: any = [];
     userAnswer: any = [];
-    counter: any = 0;
+    counter: any = '';
+
+    time: any = 300;
 
     constructor(public dialog: MatDialog,
+                public router: Router,
                 private countService: CountService) {
+
     }
 
     ngOnInit() {
         this.test = test.test;
         this.answer = answer.answer;
+        setInterval(() => {
+            if(this.time === 0){
+                this.router.navigate(['tests']);
+            }
+            this.time -= 1;
+            let count = moment.duration(this.time, 'seconds');
+            let seconds = count.seconds();
+            let newSecond;
+            if(seconds >= 10){
+                newSecond = seconds.toFixed(0);
+            }else {
+                newSecond = `0${seconds.toFixed(0)}`;
+            }
+            this.counter = '0' + count.minutes() + ':' + newSecond;
+            },1000)
     }
 
     getValue(task, pick) {

@@ -19,8 +19,9 @@ const routes: Routes = [
                 loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
             }]
     }, {
-        path: 'template',
+        path: 'template/:id',
         component: TemplateTaskComponent,
+        // resolve: {data: }
     }
 ];
 
