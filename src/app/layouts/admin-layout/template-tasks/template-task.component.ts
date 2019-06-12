@@ -1,12 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import test from '../../../../assets/json/test.json'
 import answer from '../../../../assets/json/test-answer.json'
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
 import {CountService} from '../../../services/count.service';
-import {BehaviorSubject} from 'rxjs';
 import * as moment from 'moment';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
     selector: 'app-template-task',
@@ -24,12 +22,13 @@ export class TemplateTaskComponent implements OnInit {
 
     constructor(public dialog: MatDialog,
                 public router: Router,
+                public route: ActivatedRoute,
                 private countService: CountService) {
 
     }
 
     ngOnInit() {
-        this.test = test.test;
+        this.test = this.route.snapshot.data['data']['test'];
         this.answer = answer.answer;
         setInterval(() => {
             if(this.time === 0){

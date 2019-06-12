@@ -21,6 +21,8 @@ import {
     MatToolbarModule
 } from '@angular/material';
 import {CountService} from './services/count.service';
+import {TestsService} from './services/tests.service';
+import {TemplateResolveService} from './services/template-resolve.service';
 
 @NgModule({
     imports: [
@@ -49,7 +51,7 @@ import {CountService} from './services/count.service';
     entryComponents: [
         ModalWindowComponent
     ],
-    providers: [CountService],
+    providers: [CountService,TestsService, TemplateResolveService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -4,6 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 import {AdminLayoutComponent} from './layouts/admin-layout/admin-layout.component';
 import {TemplateTaskComponent} from './layouts/admin-layout/template-tasks/template-task.component';
+import {TemplateResolveService} from './services/template-resolve.service';
 
 const routes: Routes = [
     {
@@ -21,7 +22,7 @@ const routes: Routes = [
     }, {
         path: 'template/:id',
         component: TemplateTaskComponent,
-        // resolve: {data: }
+        resolve: {data: TemplateResolveService}
     }
 ];
 
