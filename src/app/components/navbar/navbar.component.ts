@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef} from '@angular/core';
+import {Component, OnInit, ElementRef, DoCheck} from '@angular/core';
 import {ROUTES} from '../sidebar/sidebar.component';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
@@ -8,12 +8,13 @@ import {Router} from '@angular/router';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, DoCheck {
     private listTitles: any = [];
     location: Location;
     mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
+    userName: any;
 
     constructor(location: Location, private element: ElementRef, private router: Router) {
         this.location = location;
@@ -32,6 +33,13 @@ export class NavbarComponent implements OnInit {
                 this.mobile_menu_visible = 0;
             }
         });
+    }
+
+    ngDoCheck(){
+        this.userName = JSON.parse(localStorage.getItem('user'));
+        if (this.userName == null){
+            this.userName = '';
+        }
     }
 
     sidebarOpen() {

@@ -13,12 +13,12 @@ import {
     MatFormFieldModule,
     MatTooltipModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule
+
 } from '@angular/material';
 import {TableListComponent} from './table-list/table-list.component';
-import {IconsComponent} from './icons/icons.component';
-import {NotificationsComponent} from './notifications/notifications.component';
-
 
 @NgModule({
     imports: [
@@ -32,14 +32,14 @@ import {NotificationsComponent} from './notifications/notifications.component';
         MatInputModule,
         MatSelectModule,
         MatTooltipModule,
-        MatDialogModule
+        MatDialogModule,
+        MatExpansionModule,
+        MatGridListModule
     ],
     declarations: [
         TestsComponent,
         UserProfileComponent,
         TableListComponent,
-        IconsComponent,
-        NotificationsComponent,
     ],
 
     providers: []

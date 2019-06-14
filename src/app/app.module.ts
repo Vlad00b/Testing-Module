@@ -20,10 +20,8 @@ import {
     MatDialogModule,
     MatToolbarModule
 } from '@angular/material';
-import {CountService} from './services/count.service';
-import {TestsService} from './services/tests.service';
-import {TemplateResolveService} from './services/template-resolve.service';
 import {ServiceModule} from './services/service.module';
+import {ModalLoginComponent} from './modal-login/modal-login.component';
 
 @NgModule({
     imports: [
@@ -49,10 +47,12 @@ import {ServiceModule} from './services/service.module';
         AppComponent,
         AdminLayoutComponent,
         TemplateTaskComponent,
-        ModalWindowComponent
+        ModalWindowComponent,
+        ModalLoginComponent
     ],
     entryComponents: [
-        ModalWindowComponent
+        ModalWindowComponent,
+        ModalLoginComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

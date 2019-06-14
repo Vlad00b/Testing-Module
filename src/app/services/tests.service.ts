@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {APP_TESTS} from '../../assets/json/test.list';
+import {APP_TESTS} from '../../assets/allTests/test.list';
 
 Injectable();
 

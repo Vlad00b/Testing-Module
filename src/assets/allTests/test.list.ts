@@ -1,6 +1,7 @@
 export const APP_TESTS = [
     {
         id: 1,
+        title: 'Математика. Тест №1',
         test: [
             {
                 name: 'task_1',
@@ -66,6 +67,7 @@ export const APP_TESTS = [
     },
     {
         id: 2,
+        title: 'Математика. Тест №2',
         test: [
             {
                 'name': 'task_1',

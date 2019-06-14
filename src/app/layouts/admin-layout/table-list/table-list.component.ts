@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableListComponent implements OnInit {
 
+    statistic: any = {};
+    value: any;
   constructor() { }
 
   ngOnInit() {
+      this.statistic = JSON.parse(localStorage.getItem('tests'));
+      console.log(this.statistic);
   }
 
 }

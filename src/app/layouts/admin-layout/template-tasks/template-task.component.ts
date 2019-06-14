@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import answer from '../../../../assets/json/test-answer.json'
+import answer from '../../../../assets/allTests/test-answer.json'
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
 import {CountService} from '../../../services/count.service';
@@ -31,20 +31,20 @@ export class TemplateTaskComponent implements OnInit {
         this.test = this.route.snapshot.data['data']['test'];
         this.answer = answer.answer;
         setInterval(() => {
-            if(this.time === 0){
+            if (this.time === 0) {
                 this.router.navigate(['tests']);
             }
             this.time -= 1;
             let count = moment.duration(this.time, 'seconds');
             let seconds = count.seconds();
             let newSecond;
-            if(seconds >= 10){
+            if (seconds >= 10) {
                 newSecond = seconds.toFixed(0);
-            }else {
+            } else {
                 newSecond = `0${seconds.toFixed(0)}`;
             }
             this.counter = '0' + count.minutes() + ':' + newSecond;
-            },1000)
+        }, 1000)
     }
 
     getValue(task, pick) {
@@ -75,7 +75,15 @@ export class TemplateTaskComponent implements OnInit {
                 }
             })
         });
-        console.log(this.evaluation);
+        this.countService.setResultTest(
+            {
+                id: this.route.snapshot.data['data']['id'],
+                userAnswer: this.userAnswer,
+                rightAnswer: this.answer,
+                test: this.test,
+                title: this.route.snapshot.data['data']['title'],
+                value: this.countService.dataTest(this.evaluation)
+            });
         this.openDialog();
         this.userAnswer = [];
     }
