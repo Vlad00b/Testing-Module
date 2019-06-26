@@ -3,15 +3,15 @@
   "CanEdit": true,
   "Version": 7,
   "answer": [
-    {"name": "task_1", "answer": "-0,9"},
-    {"name": "task_2", "answer": "54см"},
-    {"name": "task_3", "answer": "75 < m < 99"},
-    {"name": "task_4", "answer": "y = 4 - x"},
-    {"name": "task_5", "answer": "x = -1"},
-    {"name": "task_6", "answer": "26"},
-    {"name": "task_7", "answer": "16 + h² = l²"},
-    {"name": "task_8", "answer": "0,3"},
-    {"name": "task_9", "answer": "60°"},
-    {"name": "task_10", "answer": "432см³"}
+    {"name": "task_a", "answer": "-0,9"},
+    {"name": "task_b", "answer": "54см"},
+    {"name": "task_c", "answer": "75 < m < 99"},
+    {"name": "task_d", "answer": "y = 4 - x"},
+    {"name": "task_e", "answer": "x = -1"},
+    {"name": "task_f", "answer": "26"},
+    {"name": "task_g", "answer": "16 + h² = l²"},
+    {"name": "task_h", "answer": "0,3"},
+    {"name": "task_i", "answer": "60°"},
+    {"name": "task_j", "answer": "432см³"}
 ]
 }

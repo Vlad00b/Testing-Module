@@ -4,3 +4,12 @@
     border-radius: 5px;
     color: #fff;
 }
+
+.task-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-center{
+    margin: 0 auto;
+}

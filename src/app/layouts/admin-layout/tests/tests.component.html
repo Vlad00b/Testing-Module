@@ -8,37 +8,37 @@
                             <div class="nav-tabs-wrapper">
                                 <ul class="nav nav-tabs" data-tabs="tabs">
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link active" href="#math" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link active" href="#math" data-toggle="tab">
                                             Математика
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#history" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link" href="#history" data-toggle="tab">
                                             Історія
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#physics" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link" href="#physics" data-toggle="tab">
                                             Фізика
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#language" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link" href="#language" data-toggle="tab">
                                             Українська мова
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#geography" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link" href="#geography" data-toggle="tab">
                                             Географія
                                             <div class="ripple-container"></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a mat-button class="nav-link" href="#informatic" data-toggle="tab">
+                                        <a mat-button (click)="getClass($event.target.textContent)" class="nav-link" href="#informatic" data-toggle="tab">
                                             Інформатика
                                             <div class="ripple-container"></div>
                                         </a>
@@ -55,14 +55,14 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink="/template/1"><h3>Математика. Тест №1</h3></a>
+                                                <a routerLink="/template/1"><h4>Математика. Тест №1</h4></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink="/template/2"><h3>Математика. Тест №2</h3></a>
+                                                <a routerLink="/template/2"><h4>Математика. Тест №2</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -71,14 +71,14 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Математика. Тест №3</h3></a>
+                                                <a routerLink=""><h4>Математика. Тест №3</h4></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Математика. Тест №4</h3></a>
+                                                <a routerLink=""><h4>Математика. Тест №4</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Історія</h3></a>
+                                                <a routerLink=""><h4>Історія</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Фізика</h3></a>
+                                                <a routerLink=""><h4>Фізика</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Українська мова</h3></a>
+                                                <a routerLink=""><h4>Українська мова</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Георафія</h3></a>
+                                                <a routerLink=""><h4>Георафія</h4></a>
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                     <div class="card-body">
                                         <div class="title-wrap user-name">
                                             <div class="title-name">
-                                                <a routerLink=""><h3>Інформатика</h3></a>
+                                                <a routerLink=""><h4>Інформатика</h4></a>
                                             </div>
                                         </div>
                                     </div>

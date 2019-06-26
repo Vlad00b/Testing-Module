@@ -9,7 +9,7 @@ export class TableListComponent implements OnInit {
 
     statistic: any = {};
     value: any;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
       this.statistic = JSON.parse(localStorage.getItem('tests'));

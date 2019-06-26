@@ -14,6 +14,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class TemplateTaskComponent implements OnInit {
 
     test: any = {};
+    nameTest: any = '';
     answer: any = [];
     userAnswer: any = [];
     evaluation: any = 0;
@@ -29,6 +30,7 @@ export class TemplateTaskComponent implements OnInit {
 
     ngOnInit() {
         this.test = this.route.snapshot.data['data']['test'];
+        this.nameTest = this.route.snapshot.data['data']['title'];
         this.answer = answer.answer;
         setInterval(() => {
             if (this.time === 0) {
@@ -65,6 +67,7 @@ export class TemplateTaskComponent implements OnInit {
                 }
             }
         }
+        console.log(this.userAnswer);
     }
 
     stopTest() {
@@ -75,6 +78,11 @@ export class TemplateTaskComponent implements OnInit {
                 }
             })
         });
+        this.userAnswer.sort(function (a, b) {
+            if(a.name < b.name)
+            return -1;
+        });
+        console.log(this.userAnswer);
         this.countService.setResultTest(
             {
                 id: this.route.snapshot.data['data']['id'],

@@ -6,7 +6,10 @@
                     <div class="card-header card-header-danger">
                         <h4 class="card-title">Результати тестування</h4>
                     </div>
-                    <div class="card-body" *ngFor="let item of statistic">
+                    <div class="card-body" *ngIf="statistic === null; else getStat">
+                        <p class="text-center">Пройдених тестів немає</p>
+                    </div>
+                    <div #getStat class="card-body" *ngFor="let item of statistic">
                         <mat-expansion-panel>
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
@@ -19,9 +22,9 @@
 
                             <div class="col-md-12" *ngFor="let test of item.nameTest; let i = index">
 
-                                <div class="task-title">
-                                    <div class="title-statistic bg-danger"><h5>{{test.title}}</h5></div>
-                                    <div>{{test.img}}</div>
+                                <div class="task-title title-statistic bg-danger">
+                                    <div><h5>{{test.title}}</h5></div>
+                                    <div><img src="{{test.img}}"></div>
                                 </div>
 
                                 <mat-grid-list cols="2" rowHeight="50px">
@@ -30,7 +33,6 @@
                                     <mat-grid-tile>{{item.userAnswer[i].answer}}</mat-grid-tile>
                                     <mat-grid-tile>{{item.rightAnswer[i].answer}}</mat-grid-tile>
                                 </mat-grid-list>
-
                             </div>
                         </mat-expansion-panel>
                     </div>
