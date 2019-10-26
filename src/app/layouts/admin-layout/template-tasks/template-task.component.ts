@@ -1,39 +1,52 @@
-import {Component, OnInit} from '@angular/core';
-import answer from '../../../../assets/allTests/test-answer.json'
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {ModalWindowComponent} from './modal-window/modal-window.component';
 import {CountService} from '../../../services/count.service';
 import * as moment from 'moment';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Answer} from "../../../../assets/allTests/test-answer";
 
 @Component({
     selector: 'app-template-task',
     templateUrl: './template-task.component.html',
     styleUrls: ['./template-task.component.scss']
 })
-export class TemplateTaskComponent implements OnInit {
+export class TemplateTaskComponent implements OnInit, OnDestroy {
 
-    test: any = {};
-    nameTest: any = '';
+    test: any = [];
+    nameTest: string = '';
     answer: any = [];
     userAnswer: any = [];
-    evaluation: any = 0;
-    counter: any = '';
-    time: any = 300;
+    evaluation: number = 0;
+    counter: string = '';
+    time: number = 0;
+    timer: any;
 
     constructor(public dialog: MatDialog,
                 public router: Router,
                 public route: ActivatedRoute,
                 private countService: CountService) {
-
     }
 
     ngOnInit() {
         this.test = this.route.snapshot.data['data']['test'];
         this.nameTest = this.route.snapshot.data['data']['title'];
-        this.answer = answer.answer;
-        setInterval(() => {
+        if (this.test.length === 5){
+            this.time = 120;
+        } else if (this.test.length === 10){
+            this.time = 420;
+        } else this.time = (this.test.length * 1.2) * 60;
+        Answer.forEach(item => {
+            if (item.id === this.route.snapshot.data['data']['id']){
+                this.answer = item.answer;
+            }
+        });
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+        });
+        this.timer = setInterval(() => {
             if (this.time === 0) {
+                alert('Час для проходження тесту закінчився');
                 this.router.navigate(['tests']);
             }
             this.time -= 1;
@@ -45,7 +58,7 @@ export class TemplateTaskComponent implements OnInit {
             } else {
                 newSecond = `0${seconds.toFixed(0)}`;
             }
-            this.counter = '0' + count.minutes() + ':' + newSecond;
+            this.counter = count.minutes() + ':' + newSecond;
         }, 1000)
     }
 
@@ -67,10 +80,10 @@ export class TemplateTaskComponent implements OnInit {
                 }
             }
         }
-        console.log(this.userAnswer);
     }
 
     stopTest() {
+        this.countService.next = true;
         this.userAnswer.forEach(userAnswer => {
             this.answer.forEach(rightAnswer => {
                 if (userAnswer.name === rightAnswer.name && userAnswer.answer === rightAnswer.answer) {
@@ -82,7 +95,6 @@ export class TemplateTaskComponent implements OnInit {
             if(a.name < b.name)
             return -1;
         });
-        console.log(this.userAnswer);
         this.countService.setResultTest(
             {
                 id: this.route.snapshot.data['data']['id'],
@@ -90,7 +102,7 @@ export class TemplateTaskComponent implements OnInit {
                 rightAnswer: this.answer,
                 test: this.test,
                 title: this.route.snapshot.data['data']['title'],
-                value: this.countService.dataTest(this.evaluation)
+                value: this.countService.dataTest(this.evaluation, this.answer.length)
             });
         this.openDialog();
         this.userAnswer = [];
@@ -104,7 +116,13 @@ export class TemplateTaskComponent implements OnInit {
 
     openDialog() {
         const dialogConfig = new MatDialogConfig();
-        dialogConfig.data = this.countService.dataTest(this.evaluation);
+        dialogConfig.data = this.countService.dataTest(this.evaluation, this.answer.length);
         this.dialog.open(ModalWindowComponent, dialogConfig);
+    }
+
+    ngOnDestroy(){
+        clearInterval(this.timer);
+        window.removeEventListener('beforeunload', () => {});
+        this.countService.next = false
     }
 }

@@ -19,6 +19,7 @@ import {
 
 } from '@angular/material';
 import {TableListComponent} from './table-list/table-list.component';
+import {TestGuard} from "./template-tasks/guard/test.guard";
 
 @NgModule({
     imports: [

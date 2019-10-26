@@ -13,7 +13,6 @@ export class TableListComponent implements OnInit {
 
   ngOnInit() {
       this.statistic = JSON.parse(localStorage.getItem('tests'));
-      console.log(this.statistic);
   }
 
 }

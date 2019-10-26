@@ -5,6 +5,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {AdminLayoutComponent} from './layouts/admin-layout/admin-layout.component';
 import {TemplateTaskComponent} from './layouts/admin-layout/template-tasks/template-task.component';
 import {TemplateResolveService} from './services/template-resolve.service';
+import {TestGuard} from "./layouts/admin-layout/template-tasks/guard/test.guard";
 
 const routes: Routes = [
     {
@@ -22,7 +23,8 @@ const routes: Routes = [
     }, {
         path: 'template/:id',
         component: TemplateTaskComponent,
-        resolve: {data: TemplateResolveService}
+        resolve: {data: TemplateResolveService},
+        canDeactivate: [TestGuard]
     }
 ];
 

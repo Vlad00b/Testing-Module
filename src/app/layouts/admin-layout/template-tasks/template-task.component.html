@@ -11,7 +11,7 @@
                 <div class="card" *ngFor="let task of test">
                     <div class="card-header card-header-tabs card-header-success">
                         <div class="task-title">
-                            <div><span class="nav-tabs-title">{{task.title}}</span></div>
+                            <div *ngIf="task.title"><span class="nav-tabs-title">{{task.title}}</span></div>
                             <div><img src="{{task.img}}"></div>
                         </div>
                     </div>
@@ -24,7 +24,8 @@
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="{{task.name}}"
                                                    value="{{select}}" (change)="getValue(task.name, select)">
-                                            {{select}}
+                                            <img src="{{select}}" *ngIf="select.startsWith('assets/')">
+                                            <p *ngIf="!select.startsWith('assets/')">{{select}}</p>
                                             <span class="circle">
                                                 <span class="check"></span>
                                             </span>

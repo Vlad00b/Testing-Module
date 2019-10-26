@@ -27,11 +27,13 @@
                                     <div><img src="{{test.img}}"></div>
                                 </div>
 
-                                <mat-grid-list cols="2" rowHeight="50px">
+                                <mat-grid-list cols="2" rowHeight="{{!item.userAnswer[i].answer.startsWith('assets/') ? '50px' : '150px'}}">
                                     <mat-grid-tile>Ваша відповідь</mat-grid-tile>
                                     <mat-grid-tile>Правильна відповідь</mat-grid-tile>
-                                    <mat-grid-tile>{{item.userAnswer[i].answer}}</mat-grid-tile>
-                                    <mat-grid-tile>{{item.rightAnswer[i].answer}}</mat-grid-tile>
+                                    <mat-grid-tile *ngIf="!item.userAnswer[i].answer.startsWith('assets/')"><p>{{item.userAnswer[i].answer}}</p></mat-grid-tile>
+                                    <mat-grid-tile *ngIf="!item.userAnswer[i].answer.startsWith('assets/')"><p>{{item.rightAnswer[i].answer}}</p></mat-grid-tile>
+                                    <mat-grid-tile *ngIf="item.userAnswer[i].answer.startsWith('assets/')"><img src="{{item.userAnswer[i].answer}}"></mat-grid-tile>
+                                    <mat-grid-tile *ngIf="item.userAnswer[i].answer.startsWith('assets/')"><img src="{{item.rightAnswer[i].answer}}"></mat-grid-tile>
                                 </mat-grid-list>
                             </div>
                         </mat-expansion-panel>

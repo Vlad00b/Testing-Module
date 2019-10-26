@@ -4,28 +4,20 @@ Injectable();
 
 export class CountService {
     testStatistic: any = [];
+    next: boolean = false;
+
     constructor() {
     }
 
-    dataTest(counter) {
+    dataTest(counter, length) {
         let summ: any = {
             count: counter
         };
-        if(counter <= 4){
-            summ.value = 'Незадовільно ("2")';
-        } else if(counter === 5){
-            summ.value = 'Незадовільно з можливістю перездачі ("2")';
-        } else if (counter >= 6 && counter <= 7 ){
-            summ.value = 'Задовільно ("3")';
-        } else if (counter === 8 || counter === 9){
-            summ.value = 'Добре ("4")';
-        } else if (counter === 10 ){
-            summ.value = 'Відмінно ("5")';
-        }
+        summ.value = Math.round((12 / length) * counter);
         return summ;
     }
 
-    setResultTest(test){
+    setResultTest(test) {
         console.log(test);
         let statistic = {
             id: test.id,
@@ -39,7 +31,7 @@ export class CountService {
         this.testStatistic = JSON.parse(localStorage.getItem('tests'));
         console.log(this.testStatistic);
 
-        if (this.testStatistic == null){
+        if (this.testStatistic == null) {
             this.testStatistic = [];
         }
         this.testStatistic.push(statistic);
