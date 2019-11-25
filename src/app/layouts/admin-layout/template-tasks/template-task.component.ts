@@ -29,6 +29,11 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        window.scroll(0, 0);
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = '';
+        });
         this.test = this.route.snapshot.data['data']['test'];
         this.nameTest = this.route.snapshot.data['data']['title'];
         if (this.test.length === 5){
@@ -41,12 +46,10 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
                 this.answer = item.answer;
             }
         });
-        window.addEventListener('beforeunload', (event) => {
-            event.preventDefault();
-        });
         this.timer = setInterval(() => {
             if (this.time === 0) {
                 alert('Час для проходження тесту закінчився');
+                this.countService.next = true;
                 this.router.navigate(['tests']);
             }
             this.time -= 1;

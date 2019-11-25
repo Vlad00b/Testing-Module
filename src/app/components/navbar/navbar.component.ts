@@ -35,6 +35,13 @@ export class NavbarComponent implements OnInit, DoCheck {
         });
     }
 
+    logOut(){
+        localStorage.removeItem('user');
+        localStorage.removeItem('tests');
+        window.location.reload();
+        this.router.navigateByUrl('/tests');
+    }
+
     ngDoCheck(){
         this.userName = JSON.parse(localStorage.getItem('user'));
         if (this.userName == null){

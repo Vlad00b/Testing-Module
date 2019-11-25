@@ -40,7 +40,6 @@ export class UserProfileComponent implements OnInit {
             if (this.userInfo.value.hasOwnProperty(prop)) {
                 if (!this.userInfo.value[prop]) {
                     this.userInfo.value[prop] = this.userData[prop];
-                    console.log(this.userInfo.value);
                 }
             }
         }

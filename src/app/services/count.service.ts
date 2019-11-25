@@ -13,7 +13,7 @@ export class CountService {
         let summ: any = {
             count: counter
         };
-        summ.value = Math.round((12 / length) * counter);
+        summ.value = Math.round((5 / length) * counter);
         return summ;
     }
 
@@ -29,13 +29,10 @@ export class CountService {
             value: test.value
         };
         this.testStatistic = JSON.parse(localStorage.getItem('tests'));
-        console.log(this.testStatistic);
-
         if (this.testStatistic == null) {
             this.testStatistic = [];
         }
         this.testStatistic.push(statistic);
-        console.log(this.testStatistic);
         localStorage.setItem('tests', JSON.stringify(this.testStatistic));
     }
 }

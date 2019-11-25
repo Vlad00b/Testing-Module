@@ -3,6 +3,11 @@
         <div class="navbar-wrapper">
           <p class="navbar-brand">{{userName.firstName}}</p>
         </div>
+        <div class="navbar-wrapper" (click)="logOut()" style="cursor: pointer;">
+            <i class="material-icons">
+                exit_to_app
+            </i>
+        </div>
         <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>

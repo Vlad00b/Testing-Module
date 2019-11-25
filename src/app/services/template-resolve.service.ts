@@ -10,7 +10,6 @@ export class TemplateResolveService implements Resolve<any> {
     constructor(private testService: TestsService) {}
 
     resolve(route: ActivatedRouteSnapshot) {
-        console.log(route);
         return this.testService.getTest(route.params['id']);
     }
 }
