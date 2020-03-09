@@ -18,7 +18,7 @@ import {
     MatTooltipModule,
     MatSelectModule,
     MatDialogModule,
-    MatToolbarModule
+    MatToolbarModule, MatStepperModule
 } from '@angular/material';
 import {ServiceModule} from './services/service.module';
 import {ModalLoginComponent} from './modal-login/modal-login.component';
@@ -41,6 +41,7 @@ import {TestGuard} from "./layouts/admin-layout/template-tasks/guard/test.guard"
         MatSelectModule,
         MatDialogModule,
         MatToolbarModule,
+        MatStepperModule,
         ServiceModule
     ],
     exports: [ServiceModule],

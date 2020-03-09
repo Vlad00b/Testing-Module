@@ -15,11 +15,11 @@ import {
     MatSelectModule,
     MatDialogModule,
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    MatStepperModule,
 
 } from '@angular/material';
 import {TableListComponent} from './table-list/table-list.component';
-import {TestGuard} from "./template-tasks/guard/test.guard";
 
 @NgModule({
     imports: [
@@ -35,7 +35,8 @@ import {TestGuard} from "./template-tasks/guard/test.guard";
         MatTooltipModule,
         MatDialogModule,
         MatExpansionModule,
-        MatGridListModule
+        MatGridListModule,
+        MatStepperModule
     ],
     declarations: [
         TestsComponent,
@@ -43,7 +44,7 @@ import {TestGuard} from "./template-tasks/guard/test.guard";
         TableListComponent,
     ],
 
-    providers: []
+    providers: [],
 })
 
 export class AdminLayoutModule {

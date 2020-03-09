@@ -3,40 +3,43 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header card-header-danger">
+                    <div class="card-header card-header-red">
                         <h4 class="card-title">Результати тестування</h4>
                     </div>
-                    <div class="card-body" *ngIf="statistic === null; else getStat">
+                    <div class="card-body" *ngIf="!statistic.length">
                         <p class="text-center">Пройдених тестів немає</p>
                     </div>
-                    <div #getStat class="card-body" *ngFor="let item of statistic">
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    {{item.titleTest}}
-                                </mat-panel-title>
-                                <mat-panel-description>
-                                    Правильних відповідей: {{item.value.count}}. Оцінка: {{item.value.value}}
-                                </mat-panel-description>
-                            </mat-expansion-panel-header>
+                    <div *ngIf="statistic.length">
+                        <div class="card-body" *ngFor="let item of statistic">
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{item.titleTest}}
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                        Правильних відповідей: {{item.value.count}}. Оцінка: {{item.value.value}}
+                                    </mat-panel-description>
+                                </mat-expansion-panel-header>
 
-                            <div class="col-md-12" *ngFor="let test of item.nameTest; let i = index">
+                                <div class="col-md-12" *ngFor="let test of item.nameTest">
 
-                                <div class="task-title title-statistic bg-danger">
-                                    <div><h5>{{test.title}}</h5></div>
-                                    <div><img src="{{test.img}}"></div>
+                                    <h4 innerHTML="{{test.text}}" class="task-text"></h4>
+                                    <div *ngFor="let task of test.tasks; let i = index">
+                                        <div class="task-title title-statistic">
+                                            <div><h5>{{task.title}}</h5></div>
+                                        </div>
+
+                                        <mat-grid-list cols="2" rowHeight="50px">
+                                            <mat-grid-tile>Ваша відповідь</mat-grid-tile>
+                                            <mat-grid-tile>Правильна відповідь</mat-grid-tile>
+                                            <mat-grid-tile><p>{{test.userAnswer[i].answer}}</p></mat-grid-tile>
+                                            <mat-grid-tile><p>{{test.rightAnswer[i].answer}}</p></mat-grid-tile>
+                                        </mat-grid-list>
+                                    </div>
+
                                 </div>
-
-                                <mat-grid-list cols="2" rowHeight="{{!item.userAnswer[i].answer.startsWith('assets/') ? '50px' : '150px'}}">
-                                    <mat-grid-tile>Ваша відповідь</mat-grid-tile>
-                                    <mat-grid-tile>Правильна відповідь</mat-grid-tile>
-                                    <mat-grid-tile *ngIf="!item.userAnswer[i].answer.startsWith('assets/')"><p>{{item.userAnswer[i].answer}}</p></mat-grid-tile>
-                                    <mat-grid-tile *ngIf="!item.userAnswer[i].answer.startsWith('assets/')"><p>{{item.rightAnswer[i].answer}}</p></mat-grid-tile>
-                                    <mat-grid-tile *ngIf="item.userAnswer[i].answer.startsWith('assets/')"><img src="{{item.userAnswer[i].answer}}"></mat-grid-tile>
-                                    <mat-grid-tile *ngIf="item.userAnswer[i].answer.startsWith('assets/')"><img src="{{item.rightAnswer[i].answer}}"></mat-grid-tile>
-                                </mat-grid-list>
-                            </div>
-                        </mat-expansion-panel>
+                            </mat-expansion-panel>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@
     padding: 10px 15px;
     border-radius: 5px;
     color: #fff;
+    background: #bf0105;
 }
 
 .task-title{
@@ -12,4 +13,13 @@
 
 .text-center{
     margin: 0 auto;
+}
+.task-text {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid black;
+}
+
+.card-header-red {
+    background: linear-gradient(60deg, #b21f1f, #3e76b4);
 }

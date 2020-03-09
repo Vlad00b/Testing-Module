@@ -1,1133 +1,480 @@
 export const APP_TESTS = [
     {
         id: 1,
-        title: 'Математика ЗНО 2015',
-        test: [
+        title: 'Англійська мова ЗНО 2019',
+        tests: [
             {
-                name: 'task_a',
-                title: '2(5x + 6) =',
-                img: '',
-                variant: ['10x + 12', '10x + 6', '7x + 8', '7x + 12', '5х+8']
+                text: `<p>Unidentified Farming Object<br>
+                One night last summer, while my husband, Earl, watched television in the family room.
+                I relaxed and read in our bedroom. It was another nice, peaceful night in our quiet rural
+                neighbourhood. It was about 10 p.m., when Earl burst into the bedroom shouting, "Get up!
+                There’s something in the pasture – it looks like a UFO, It’s all covered in lights and is heading
+                straight for the house!"
+
+                I felt my heart pounding against my chest as I jumped up, grabbed my housecoat and shoes,
+                and ran outside with Earl to face whatever crisis was happening out there in the dark. And
+                there it was, speeding directly toward us: an enormous object with light radiating all around
+                it. The light was so blinding we couldn’t actually see the thing itself. For a second, I wondered
+                if it really was a UFO. What else could it be?
+                Whatever it was, it was scary, coming out of nowhere, heading toward us at a high speed,
+                lights blazing in the country darkness. But right before it reached the pasture fence, it made a
+                fast turn. Without the lights shining directly in our eyes, we could see that it was a big highpowered tractor mower, lit up like Times Square on wheels.
+                That’s when we remembered that, several weeks earlier, we’d asked a neighbour if he knew
+                anyone who could mow our pasture. He said he knew a fellow who planned to mow his hay
+                nearby and might do ours at the same time, but he didn’t know when. After some time, we
+                learnt that the tractor driver was in the hospital with back trouble. But as the weeks went by,
+                we forgot the whole matter.
+                Apparently, the fellow had either recovered or had hired someone to mow his hay. Whoever it
+                was, he or she decided to finish off the day by driving in through our open gate and doing our
+                pasture after dark.
+                We were extremely relieved to see that our unexpected meeting had nothing to do with aliens
+                determined to start their Earth invasion in our pasture. By the time our heart rates had settled
+                down to normal, we burst into laughter.</p>`,
+                tasks: [
+                    {
+                        name: 'task_a',
+                        title: 'What happened to Earl and Shirley one night?',
+                        img: '',
+                        variant: ['They found a spaceship in their garden',
+                            'They noticed a bright light at midnight',
+                            'They heard a loud noise in the yard.',
+                            'They saw a frightening object nearby']
+                    },
+                    {
+                        name: 'task_b',
+                        title: 'How did Shirley react to Earl’s words?',
+                        img: '',
+                        variant: ['She had a heart attack.', 'She rushed out barefoot.',
+                            'She followed her husband.', 'She hid in the house.']
+                    },
+                    {
+                        name: 'task_c',
+                        title: 'Which of the following is 12TT58( about the tractor?',
+                        img: '',
+                        variant: ['It looked horrible', 'It moved very quickly.',
+                            'It made a terrible noise', 'It illuminated the area.']
+                    },
+                    {
+                        name: 'task_d',
+                        title: 'Why were Shirley and Earl surprised to see the tractor?',
+                        img: '',
+                        variant: ['They had forgotten about their plans.',
+                            'They were already sleeping peacefully.',
+                            'They had harvested their hay themselves.',
+                            'They knew about the neighbour’s illness.']
+                    },
+                    {
+                        name: 'task_e',
+                        title: 'What can be inferred from the passage about Shirley and Earl?',
+                        img: '',
+                        variant: ['They are amused by the incident.', 'They are interested in aliens and UFOs',
+                            'They feel bored living in the country', 'They feel bored living in the country']
+                    },
+                ],
             },
             {
-                name: 'task_b',
-                title: 'На рисунку зображено рівнобедрений трикутник АВС (АВ=ВС). Визначте градусну міру кута ВАС, якщо ∠В=40°.',
-                img: 'assets/img/test/1.2.png',
-                variant: ['80°', '70°', '60°', '50°', '40°']
+                text: `<p>Bach, Beatles and ...Maths<br>
+                From the rich complexity of the Bach fugues to the catchy songs of the Beatles, music
+                and mathematics overlap in all kinds of interesting (34)__________.
+                Would you believe that research has shown that certain (35)__________ of music end up
+                being more popular and mainstream (36)__________ their ³mathematical´ structure?
+                The link between the physical practice of music and strong mathematical (37)______
+                are demonstrated in various studies. They show that kids who play a musical instrument
+                can (38)__________ more complex arithmetical operations than those who do not play an
+                instrument.</p>`,
+                tasks: [
+                    {
+                        name: 'task_f',
+                        title: '34',
+                        img: '',
+                        variant: ['means',
+                            'items',
+                            'ways',
+                            'methods',
+                        ]
+                    },
+                    {
+                        name: 'task_g',
+                        title: '35',
+                        img: '',
+                        variant: ['notes',
+                            'pieces',
+                            'details',
+                            'tones',
+                        ]
+                    },
+                    {
+                        name: 'task_h',
+                        title: '36',
+                        img: '',
+                        variant: ['except for',
+                            'along with',
+                            'due to',
+                            'apart from',
+                        ]
+                    },
+                    {
+                        name: 'task_i',
+                        title: '37',
+                        img: '',
+                        variant: ['abilities',
+                            'opportunities',
+                            'properties',
+                            'features',
+                        ]
+                    },
+                    {
+                        name: 'task_j',
+                        title: '38',
+                        img: '',
+                        variant: ['count',
+                            'enumerate',
+                            'achieve',
+                            'perform',
+                        ]
+                    }
+                ]
             },
             {
-                name: 'task_c',
-                title: 'Розв’яжіть нерівність 0,2x – 54 < 0',
-                img: '',
-                variant: ['(–∞; 27)', '(270; +∞)', '(–∞; 2,7)', '(–∞; 270)', '(10,8; +∞)']
-            },
-            {
-                name: 'task_d',
-                title: 'Графік функції, визначеної на проміжку [–5; 4], проходить через одну з наведенихточок (див. рисунок). Укажіть цю точку.',
-                img: 'assets/img/test/1.4.png',
-                variant: ['(–5; –2)', '(1; –3)', '(–1; 4)', '(–3; 1)', '(0; –2)']
-            },
-            {
-                name: 'task_e',
-                title: 'Сергій і Петро збирали яблука. Сергій зібрав яблук у 5 раз більше, ніж Петро. Яку частину всіх яблук зібрав Петро?',
-                img: '',
-                variant: ['1/5', '1/6', '1/2', '5/6', '4/5']
-            },
-            {
-                name: 'task_f',
-                title: 'На рисунку зображено куб ABCDA1B1DC1D1. Яка з наведених прямих паралельна площині (AA1B1)?',
-                img: 'assets/img/test/1.6.png',
-                variant: ['ВС', 'ВD', 'C1D', 'CB1', 'A1B']
-            },
-            {
-                name: 'task_g',
-                title: 'Розв’яжіть рівняння 4ˣ = 8',
-                img: '',
-                variant: ['1/2', '2/3', '3/2', '2', '32']
-            },
-            {
-                name: 'task_h',
-                title: 'На рисунку зображено прямокутний трикутник з катетами a і b, гіпотенузою c та гострим кутом α. Укажіть правильну рівність.',
-                img: 'assets/img/test/1.8.png',
-                variant: ['cos α = a/b', 'cos α = c/b', 'cos α = a/c', 'cos α = c/a', 'cos α = b/c']
-            },
-            {
-                name: 'task_i',
-                title: 'Випущено партію з 300 лотерейних білетів. Імовірність того, що навмання вибраний білет із цієї партії буде виграшним, дорівнює 0,2. Визначте кількість білетів без виграшу серед цих 300 білетів.',
-                img: '',
-                variant: ['6', '60', '294', '150', '240']
-            },
-            {
-                name: 'task_j',
-                title: 'Спростіть вираз 1/(1+tg²α)',
-                img: '',
-                variant: ['cos²α', 'sin²α', 'tg²α', 'Ctg²α', '1']
-            },
-            {
-                name: 'task_k',
-                title: 'На якому рисунку зображено ескіз графіка функції y = √(x-2)',
-                img: '',
-                variant: ['assets/img/test/1.11.1.png', 'assets/img/test/1.11.2.png', 'assets/img/test/1.11.3.png', 'assets/img/test/1.11.4.png', 'assets/img/test/1.11.5.png']
-            },
-            // {
-            //     name: 'task_l',
-            //     title: 'На діагоналі АС квадрата АВСD задано точку, відстань від якої до сторін АВ і ВС дорівнює 2 см і 6 см відповідно. Визначте периметр квадрата АВСD.',
-            //     img: '',
-            //     variant: ['16см', '24см', '32см', '48см', '64см']
-            // },
-            {
-                name: 'task_m',
-                title: 'Розв’яжіть систему рівнянь. Для одержаного розв’язку (xₒ ; yₒ) системи обчисліть суму xₒ + yₒ.',
-                img: 'assets/img/test/1.13.png',
-                variant: ['11', '21', '-7', '-10', '-14']
-            },
-            // {
-            //     name: 'task_n',
-            //     title: 'Висота правильної чотирикутної піраміди дорівнює 3 см, а сторона її основи – 12 см. Знайдіть довжину бічного ребра піраміди.',
-            //     img: '',
-            //     variant: ['6см', '3√5см', '5√3см', '9см', '15см']
-            // },
-            {
-                name: 'task_o',
-                title: 'Яку властивість із наведених має функція у=2х-9?',
-                img: '',
-                variant: ['Є парною', 'Є непарною', 'Є періодичною', 'Є спадною', 'Є зростаючою']
-            },
-            {
-                name: 'task_p',
-                title: 'Розв’яжіть рівняння (|x|/10) = 2',
-                img: '',
-                variant: ['-5;5', '-20;20', '20', '5', '-0,2;0,2']
-            },
-            // {
-            //     name: 'task_q',
-            //     title: 'Лист заліза, що має форму прямокутника АВСD (АВ = 50см), згортають таким чином, щоб отримати циліндричну трубу (див. рисунки 1 і 2). Краї АВ і СD зварюють між собою без накладання одного краю на інший. Обчисліть площу бічної поверхні отриманого циліндра, якщо діаметр його основи дорівнює 20 см. Виберіть відповідь, найближчу до точної. Товщиною листа заліза та швом від зварювання знехтуйте.',
-            //     img: '',
-            //     variant: ['1570см²', '3150см²', '5240см²', '6300см²', '1000см²']
-            // },
-            {
-                name: 'task_r',
-                title: 'Укажіть проміжок, якому належить число',
-                img: 'assets/img/test/1.18.png',
-                variant: ['(0;1)', '(1;2)', '(2;3)', '(3;4)', '(4;5)']
-            },
-            {
-                name: 'task_s',
-                title: 'Укажіть рівняння прямої, яка може бути дотичною до графіка функції у = f(x) у точці з абсцисою xₒ = 2, якщо ƒ`(2) = –3 ',
-                img: '',
-                variant: ['y = (-3/2)x + 1', 'y =  3x - 2', 'y = 2x + 3 ', 'y = (3/2)x - 1', 'y = -3x + 2']
-            },
-            {
-                name: 'task_t',
-                title: 'Розв’яжіть нерівність',
-                img: 'assets/img/test/1.20.png',
-                variant: ['{–2}U(3; 6]', '(–∞; –2]U(3; 6]', '[–2; 6]', '(–∞; 6]', '(–∞; 3)U(3; 6]']
-            },
+                text: `<p>The History of the T-Shirt<br>
+                At the beginning of the twentieth century, the T-Shirt quickly became an American
+                favourite. Now, a century later, the T-Shirt (39)__________ as popular as ever.
+                The American T-Shirt began(40)__________ WWI when American armed forces noticed
+                European soldiers wearing a lightweight cotton undershirt on the hot European summer
+                days. Compared to the wool uniforms that the American soldiers wore, these undershirts
+                were cooler and more comfortable and they quickly caught on with the Americans. Due
+                to their simple(41)__________, these shirts became known in the USA as "T-Shirts".
+                In the 60s people began to tie dye and screenprint the basic cotton T-Shirt making it an
+                even bigger commercial (42)__________. Advances in printing and dying allowed more
+                variety and the Tank Top, Muscle Shirt, Scoop Neck, V-Neck, and many other variations
+                of the T-Shirt(43)_________ into fashion.<p>`,
+                tasks: [
+                    {
+                        name: 'task_k',
+                        title: '39',
+                        img: '',
+                        variant: ['remains', 'goes', 'continues', 'leaves']
+                    },
+                    {
+                        name: 'task_l',
+                        title: '40',
+                        img: '',
+                        variant: ['at', 'оn', 'during', 'for']
+                    },
+                    {
+                        name: 'task_m',
+                        title: '41',
+                        img: '',
+                        variant: ['colour', 'design', 'fashion', 'print']
+                    },
+                    {
+                        name: 'task_n',
+                        title: '42',
+                        img: '',
+                        variant: ['success', 'profit', 'income', 'progress']
+                    },
+                    {
+                        name: 'task_o',
+                        title: '43',
+                        img: '',
+                        variant: ['went', 'came', 'moved', 'entered']
+                    },
+                ]
+            }
         ]
     },
+
     {
         id: 2,
-        title: 'Математика ЗНО 2016',
-        test: [
+        title: 'Англійська мова ЗНО 2018',
+        tests: [
             {
-                name: 'task_a',
-                title: 'На рисунку зображено прямі m і n, що перетинаються.Визначте градусну міру кута γ, якщо α+β=50°.',
-                img: 'assets/img/test/2.1.png',
-                variant: ['310°', '155°', '145°', '140°', '130°']
+                text: `<p>The expression "blind (49) __________a bat” is completely inaccurate because bats aren’t
+                blind. They (50)__________ see reasonably well with their eyes (in laboratory tests
+                have been shown (51)_________ shapes and colours), and when it (52)__________
+                they navigate using a sophisticated sonar (53) __________ called echolocation</p>`,
+                tasks: [
+                    {
+                        name: 'task_a',
+                        title: '49',
+                        img: '',
+                        variant: ['how',
+                            'as',
+                            'as if',
+                            'such as']
+                    },
+                    {
+                        name: 'task_b',
+                        title: '50',
+                        img: '',
+                        variant: ['can', 'may',
+                            'might', 'must']
+                    },
+                    {
+                        name: 'task_c',
+                        title: '51',
+                        img: '',
+                        variant: ['distinguished',
+                            'distinguishing',
+                            'distinguish',
+                            'to distinguish']
+                    },
+                    {
+                        name: 'task_d',
+                        title: '52',
+                        img: '',
+                        variant: ['get', 'will get',
+                            'gets', 'getting']
+                    },
+                    {
+                        name: 'task_e',
+                        title: '53',
+                        img: '',
+                        variant: ['system', 'systematic', 'systematically', 'systematize']
+                    }
+                ]
             },
             {
-                name: 'task_b',
-                title: 'Укажіть число,що є розв’язком нерівності',
-                img: 'assets/img/test/2.2.png',
-                variant: ['-2', '0', '2', '9', '4']
-            },
-            {
-                name: 'task_c',
-                title: '0,4x² ∙ 5x³ = ',
-                img: '',
-                variant: ['2x⁶', '20x⁵', '2x⁵', '0.2x⁵', '0.2x⁶']
-            },
-            {
-                name: 'task_d',
-                title: 'Розв’яжіть систему рівнянь. Якщо(xₒ ; yₒ) – розв’язок цієї системи,то xₒ * yₒ =',
-                img: 'assets/img/test/2.4.png',
-                variant: ['-36', '-14', '-6', '4', '6']
-            },
-            {
-                name: 'task_e',
-                title: 'Графіком однієї з наведених функцій є пряма. Укажіть цю функцію.',
-                img: '',
-                variant: ['y = 2ͯ', 'y = x² - 2x', 'y = cos(2x)', 'y = 2x', 'y = 2/x']
-            },
-            {
-                name: 'task_f',
-                title: 'Якому значенню серед на ведених може дорівнювати довжина сторони АС трикутника  АВС, якщо АВ = 3 см,ВС = 10см ?',
-                img: '',
-                variant: ['3 см', '5 см', '7 см', '11 см', '15 см']
-            },
-            {
-                name: 'task_g',
-                title: 'Спростіть вираз ',
-                img: 'assets/img/test/2.7.png',
-                variant: ['(a+b)/ab', '1/ab', '1- (b - a)', '(a-b)/ab', '0']
-            },
-            {
-                name: 'task_h',
-                title: 'У прямокутній системі координат у просторі на осі z вибрано точку М (див.рисунок). Серед наведених варіантів укажіть можливі координати цієї точки.',
-                img: 'assets/img/test/2.8.png',
-                variant: ['(1;0;0)', '(1;1;0)', '(0;0;1)', '(0;0;-1)', '(0;1;0)']
-            },
-            {
-                name: 'task_i',
-                title: 'Задано арифметичну прогресію(a_n),у якій різниця d = 0,5, п’ятнадцятий член a_15 = 12.Визначте перший член прогресії a_1.',
-                img: '',
-                variant: ['24', '12,5', '6', '5', '4,5']
-            },
-            // {
-            //     name: 'task_j',
-            //     title: 'На рисунку жирними точками зображено річні мінімуми площі поверхні арктичного льоду,що спостерігався в період з 2004р. по 2014р.(для наочності точки з’єднано відрізками).По горизонталі відмічено роки,а по вертикалі – площу поверхні льоду(у млн км²).Користуючись наведеною інформацією,визначте із вказаного періоду рік,у якому величина річного мінімуму площі поверхні льоду змінилась найбільше порівняно з попереднім роком',
-            //     img: 'assets/img/test/2.10.png',
-            //     variant: ['2006 р.', '2007 р.', '2009 р.', '2012 р.', '2013 р.']
-            // },
-            {
-                name: 'task_k',
-                title: 'Прямі a та b мимобіжні. Яке з наведених тверджень є правильними?\n' +
-                'І.   Прямі a та b перетинаються.\n' +
-                'ІІ.  Прямі a та b лежать в одній площині\n' +
-                'ІІІ. Існує пряма, паралельна прямій a ,що перетинає пряму b.\n',
-                img: '',
-                variant: ['лише І', 'лише ІІ', 'лише І та ІІ', 'лише ІІІ', 'І,ІІ та ІІІ']
-            },
-            {
-                name: 'task_l',
-                title: 'Якому проміжку належить число ',
-                img: 'assets/img/test/2.12.png',
-                variant: ['[0;1)', '[1;2)', '[2;3)', '[3;4)', '[4;+ ∞)']
-            },
-            {
-                name: 'task_m',
-                title: '',
-                img: 'assets/img/test/2.13.png',
-                variant: ['3', '3,3', '0,25', '4', '1']
-            },
-            {
-                name: 'task_n',
-                title: 'Екрани телевізорів,зображених на рис.1 і 2, мають форму прямокутників,відповідні сторони яких пропорційні. Діагоналі екранів цих телевізорів дорівнюють відповідно 32 дюйма і 48 дюймів. Визначте, у скілько разів площа екрана телевізора,зображеного на рис. 2, більша за площу телевізора, зображеного на рис. 1.',
-                img: 'assets/img/test/2.14.png',
-                variant: ['в 1,5 раза', 'у 16 разів', 'у 2,56 раза', 'у 4 рази', 'у 2,25 разів']
-            },
-            {
-                name: 'task_o',
-                title: 'Обчисліть значення виразу 4sin²α, якщо 4cos²α = 1.',
-                img: '',
-                variant: ['3', '3/4', '1/4', '4', '0']
-            },
-            {
-                name: 'task_p',
-                title: 'Використовуючи формулу Ньютона-Лейбніца обчисліть ',
-                img: 'assets/img/test/2.16.png',
-                variant: ['12', '14', '18', '22', '42']
-            },
-            // {
-            //     name: 'task_q',
-            //     title: 'Визначте об’єм правильної трикутної призми, бічні грані якої є квадратами,а периметр основи дорівнює 12',
-            //     img: '',
-            //     variant: ['16√3', '64', '48', '64√3', '576']
-            // },
-            {
-                name: 'task_r',
-                title: 'Яка з наведених парабол може бути графіком функції y = x² + px + q, якщо рівняння x² + px + q = 0 не має дійсних коренів?\n',
-                img: '',
-                variant: ['assets/img/test/2.18.1.png', 'assets/img/test/2.18.2.png', 'assets/img/test/2.18.3.png', 'assets/img/test/2.18.4.png', 'assets/img/test/2.18.5.png']
-            },
-            // {
-            //     name: 'task_s',
-            //     title: 'Розв’яжіть рівняння  ',
-            //     img: 'assets/img/test/2.19.png',
-            //     variant: ['assets/img/test/2.19.1.png', 'assets/img/test/2.19.2.png', 'assets/img/test/2.19.3.png', 'assets/img/test/2.19.4.png', 'assets/img/test/2.19.5.png']
-            // },
-            {
-                name: 'task_t',
-                title: 'Розв’яжіть нерівність',
-                img: 'assets/img/test/2.20.png',
-                variant: ['(-1/3;+ ∞)', '(-∞;1/3)', '(-1/3;0)', '(0;1/3)', '(-∞;-3)']
-            },
+                text: `<p>The Great Wall of China isn’t visible from the moon with the naked eye. Space begins about
+                sixty miles from Earth's surface, which is (54) __________ close. The British astronomer
+                Fred Hoyle (55)_________ to have remarked, "Space isnt remote at all. It's only an hour's
+                drive away if your car (56)______ go straight upwards". From this short distance away
+                it is posible to pick out many man-made objects such as motorways, railways, cities, fields
+                and the Create Wall. However, you only have to travel (57) __________ few thousand miles
+                away before all man-made objects (58)__________ from view. </p>`,
+                tasks: [
+                    {
+                        name: 'task_f',
+                        title: '54',
+                        img: '',
+                        variant: ['surprisingly',
+                            'surprised',
+                            'surprise',
+                            'surprising',
+                        ]
+                    },
+                    {
+                        name: 'task_g',
+                        title: '55',
+                        img: '',
+                        variant: ['reported',
+                            'is reported',
+                            'reports',
+                            'had been reported',
+                        ]
+                    },
+                    {
+                        name: 'task_h',
+                        title: '56',
+                        img: '',
+                        variant: ['need',
+                            'must',
+                            'should',
+                            'could',
+                        ]
+                    },
+                    {
+                        name: 'task_i',
+                        title: '57',
+                        img: '',
+                        variant: ['the others',
+                            'the other',
+                            'others',
+                            'another',
+                        ]
+                    },
+                    {
+                        name: 'task_j',
+                        title: '58',
+                        img: '',
+                        variant: ['fade', 'will fade', 'fades', 'would fade']
+                    },
+                ]
+            }
         ]
     },
+
     {
         id: 3,
-        title: 'Математика ЗНО 2017',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Якщо числа х і у задовольняють співвідношення 2y + 4 = x,то у =',
-                img: '',
-                variant: ['2х - 8', '8 - 2x', '(x - 4)/2', '(x + 4)/2', '(4 - x)/2']
-            },
-            // {
-            //     name: 'task_b',
-            //     title: 'На відрізку АВ вибрано точку М так, що довжина відрізка AM утричі більша за довжину MB. Визначте довжину відрізка АВ, якщо MB = 12 см.',
-            //     img: '',
-            //     variant: ['48 см', '36 см', '24 см', '42 см', '54 см']
-            // },
-            {
-                name: 'task_c',
-                title: 'Розв’яжіть рівняння ',
-                img: 'assets/img/test/3.3.png',
-                variant: ['-3', '-2', '-1,5', '1,5', '2']
-            },
-            // {
-            //     name: 'task_d',
-            //     title: 'Розв’яжіть систему рівнянь. Якщо(xₒ ; yₒ) – розв’язок цієї системи,то xₒ * yₒ =',
-            //     img: 'assets/img/test/2.4.png',
-            //     variant: ['-36', '-14', '-6', '4', '6']
-            // },
-            // {
-            //     name: 'task_e',
-            //     title: '5.	У прямокутній системі координат у просторі задано сферу із центром у початку координат, якій належить точка А(0; 0; -5). Яка з наведених точок також належить цій сфері?',
-            //     img: '',
-            //     variant: ['К (5;5;0)', 'L (0;1;4)', 'М (0;0; 10)', 'N (0;0;5)', 'р(5; 5; 5)']
-            // },
-            {
-                name: 'task_f',
-                title: 'Визначте точку перетину графіка функції у = 2х-2 з віссю х.',
-                img: '',
-                variant: ['(0; -2)', '(-2; 0)', '(1;0)', '(0;1)', '(1;-2)']
-            },
-            {
-                name: 'task_g',
-                title: 'Спростіть вираз ',
-                img: 'assets/img/test/3.7.png',
-                variant: ['-1', 'а - 4', 'а + 4', '1', '(а - 4)²']
-            },
-            {
-                name: 'task_h',
-                title: 'Усі зображені на рисунку прямі лежать в одній площині, прямі mine паралельними. Визначте градусну міру кута α',
-                img: 'assets/img/test/3.8.png',
-                variant: ['20°', '50°', '60°', '70о', '110°']
-            },
-            // {
-            //     name: 'task_i',
-            //     title: 'Укажіть проміжок, якому належить корінь рівняння √(6-4x) = 4',
-            //     img: '',
-            //     variant: ['[-3;-1)', '[-1;0)', '[0;1)', '[1;3)', '[3;6)']
-            // },
-            {
-                name: 'task_j',
-                title: 'Точка А належить площині α. Які з наведених тверджень є правильними?\n' +
-                'I. Через точку А можна провести пряму, перпендикулярну до площини α.\n' +
-                'II. Через точку А можна провести площину, перпендикулярну до площини α.\n' +
-                'III. Через точку А можна провести площину, паралельну площині α.\n',
-                img: '',
-                variant: ['лише І', 'лише II та III', 'лише II', 'лише І та II', 'І,ІІта III']
-            },
-            {
-                name: 'task_k',
-                title: 'На одному з рисунків зображено графік функції у = 1 - х². Укажіть цей рисунок.',
-                img: '',
-                variant: ['assets/img/test/3.11.1.png', 'assets/img/test/3.11.2.png', 'assets/img/test/3.11.3.png', 'assets/img/test/3.11.4.png', 'assets/img/test/3.11.5.png']
-            },
-            {
-                name: 'task_l',
-                title: '1 - sin²а - cos²а =',
-                img: '',
-                variant: ['-2', '0', '1', '2cos²а', '1 + cos²а']
-            },
-            {
-                name: 'task_m',
-                title: 'В арифметичній прогресії\nВизначте десятий член а10  цієї прогресії.',
-                img: 'assets/img/test/3.13.png',
-                variant: ['-31', '-27', '26', '27', '23']
-            },
-            {
-                name: 'task_n',
-                title: 'Укажіть проміжок, якому належить число',
-                img: 'assets/img/test/3.14.png',
-                variant: ['(0;1)', '(1;2)', '(2;3)', '(3;4)', '(4;5)']
-            },
-            {
-                name: 'task_o',
-                title: 'Розв’яжіть нерівність log2 х < b, використавши рисунок',
-                img: 'assets/img/test/3.15.png',
-                variant: ['assets/img/test/3.15.1.png', 'assets/img/test/3.15.2.png', 'assets/img/test/3.15.3.png', 'assets/img/test/3.15.4.png', 'assets/img/test/3.15.5.png']
-            },
-            // {
-            //     name: 'task_p',
-            //     title: 'Периметр основи правильної чотирикутної піраміди дорівнює 72 см. Визначте довжину висоти піраміди, якщо її апофема дорівнює 15 см',
-            //     img: '',
-            //     variant: ['6 см', '9 см', '10 см', '12 см', '14 см']
-            // },
-            {
-                name: 'task_q',
-                title: 'Розв’яжіть нерівність (x² + 64)(x - 5) > 0.',
-                img: '',
-                variant: ['(5; +∞)', '(-∞; 5)U(5;+∞)', '(5;8)', '(-∞5)U(8; +∞)', '(-∞; 5)']
-            },
-            // {
-            //     name: 'task_r',
-            //     title: 'Яка з наведених парабол може бути графіком функції y = x² + px + q, якщо рівняння x² + px + q = 0 не має дійсних коренів?\n',
-            //     img: '',
-            //     variant: ['assets/img/test/2.18.1.png', 'assets/img/test/2.18.2.png', 'assets/img/test/2.18.3.png', 'assets/img/test/2.18.4.png', 'assets/img/test/2.18.5.png']
-            // },
-            // {
-            //     name: 'task_s',
-            //     title: 'Розв’яжіть рівняння  ',
-            //     img: 'assets/img/test/2.19.png',
-            //     variant: ['assets/img/test/2.19.1.png', 'assets/img/test/2.19.2.png', 'assets/img/test/2.19.3.png', 'assets/img/test/2.19.4.png', 'assets/img/test/2.19.5.png']
-            // },
-            // {
-            //     name: 'task_t',
-            //     title: 'Розв’яжіть нерівність',
-            //     img: 'assets/img/test/2.20.png',
-            //     variant: ['(-1/3;+ ∞)', '(-∞;1/3)', '(-1/3;0)', '(0;1/3)', '(-∞;-3)']
-            // },
-        ]
-    },
-    {
-        id: 4,
-        title: 'Математика ЗНО 2018',
-        test: [
-            {
-                name: 'task_a',
-                title: '',
-                img: 'assets/img/test/4.1.png',
-                variant: ['а+2', '2а+1', 'а+1', '2а', 'а']
-            },
-            {
-                name: 'task_b',
-                title: 'Три прямі розміщені в одній площині, перетинаються в одній точці (див. рисунок). Визначте градусну міру кута α.',
-                img: 'assets/img/test/4.2.png',
-                variant: ['80°', '50°', '90°', '100°', '70°']
-            },
-            {
-                name: 'task_c',
-                title: 'У буфеті друзі купили кілька однакових тістечок вартістю 10 грн кожне і 5 однакових булочок вартістю х грн. кожна. Яке з чисел може виражати загальну кількість цієї покупки (у грн), якщо х – ціле число?',
-                img: '',
-                variant: ['31', '32', '33', '34', '35']
-            },
-            {
-                name: 'task_d',
-                title: 'На рисунку зображено графік функції y=f(x), визначеної на проміжку [–4; 6]. Укажіть найбільше значення функції f на цьому проміжку.',
-                img: 'assets/img/test/4.4.png',
-                variant: ['-4', '3', '4', '5', '6']
-            },
-            {
-                name: 'task_e',
-                title: 'Яке з наведених чисел є коренем рівняння',
-                img: 'assets/img/test/4.5.png',
-                variant: ['4', '13', '63', '65', '82']
-            },
-            // {
-            //     name: 'task_f',
-            //     title: 'Укажіть формулу для обчислення об’єму V півкулі радіуса R (див. рисунок).',
-            //     img: 'assets/img/test/4.6.png',
-            //     variant: ['V=4ππ²', 'V=(2/3)πR³', 'V=πR³', 'V=2πR²', 'V=(4/3)πR²']
-            // },
-            {
-                name: 'task_g',
-                title: 'Розв’яжіть рівняння 4√x = 1',
-                img: '',
-                variant: ['1/2', '1/8', '16', '-1/2;1/2', '1/16']
-            },
-            {
-                name: 'task_h',
-                title: 'Знайти область визначення функції',
-                img: 'assets/img/test/4.8.png',
-                variant: ['(-∞;2)U(2;+∞)', '(-∞;-1)U(2;+∞)', '(-∞;-2)U(-2;+∞)', '(-∞;-1)U(-1;2)U(2;+∞)', '(-∞;+∞)']
-            },
-            {
-                name: 'task_i',
-                title: 'У просторі задано паралельні прямі m і n. Які з наведених тверджень є правильними?\n' +
-                'І. Існує площина, що містить обидві прямі m і n.\n' +
-                'ІІ. Існує пряма, що перетинає обидві прямі m і n.\n' +
-                'ІІІ. Існує точка, що належить обом прямим m і n.\n',
-                img: '',
-                variant: ['Лише І', 'Лише ІІ', 'Лише ІІ та ІІІ', 'Лише ІІІ', 'Лише І та ІІ']
-            },
-            {
-                name: 'task_j',
-                title: 'Спростіть вираз a(a+2b)-(a+b)²',
-                img: '',
-                variant: ['4ab+b²', '4ab-b²', '-b²', '2ab-b²', 'b²']
-            },
-            {
-                name: 'task_k',
-                title: 'На рисунку зображено паралельні прямі a і b та січну CD. Знайдіть відстань між прямими  a і b, якщо СК= 5 см, КD= 2 см, а відстань від точки К до прямої a, дорівнює 1 см.',
-                img: 'assets/img/test/4.11.png',
-                variant: ['2,5см', '3см', '3,5см', '4см', '4,5см']
-            },
-            // {
-            //     name: 'task_l',
-            //     title: 'Учень з понеділка до п’ятниці записував час (у хвилинах), який він витрачав на дорогу до школи та зі школи (див. таблицю).\n' +
-            //     'На скільки хвилин у середньому дорога зі школи триваліша за дорогу до школи?',
-            //     img: 'assets/img/test/4.12.png',
-            //     variant: ['2', '3', '4', '5', '6']
-            // },
-            {
-                name: 'task_m',
-                title: '1 - sinα * Ctgα * cosα =',
-                img: '',
-                variant: ['cos2α', '1-sin2α', '0', 'cos²α', 'sin²α']
-            },
-            {
-                name: 'task_n',
-                title: 'Розв’яжіть систему рівнянь. \n Якщо (xₒ ; yₒ) розв’язок системи, то  xₒ=',
-                img: 'assets/img/test/4.14.png',
-                variant: ['-6', '-16', '-9', '2', '6']
-            },
-            // {
-            //     name: 'task_o',
-            //     title: 'На рисунку зображено розгортку правильної трикутної призми. Визначте площу бічної поверхні цієї призми, якщо периметр розгортки (суцільна лінія) дорівнює 52 см, а периметр основи призми становить 12 см. ',
-            //     img: 'assets/img/test/4.15.png',
-            //     variant: ['36см²', '48см²', '60см²', '72см²', '96см²']
-            // },
-            {
-                name: 'task_p',
-                title: 'Обчисліть значення виразу',
-                img: 'assets/img/test/4.16.png',
-                variant: ['1/4', '4', '3', '27', '445']
-            },
-            // {
-            //     name: 'task_q',
-            //     title: 'На рисунку зображено фрагмент графіка періодичної функції з періодом  , яка визначена на множині дійсних чисел. Укажіть серед наведених точку, що належить цьому графіку.',
-            //     img: 'assets/img/test/4.17.png',
-            //     variant: ['(1;2π)', '(3π;0)', '(-1;5π)', '(5π;0)', '(5π;-1)']
-            // },
-            {
-                name: 'task_r',
-                title: 'Розв’яжіть нерівність',
-                img: 'assets/img/test/4.18.png',
-                variant: ['[ 34,5 ; +∞ ]', '[4; +∞)', '(-∞; 4]', '(-∞; 4,5]', '[4,5; +∞)']
-            },
-            {
-                name: 'task_s',
-                title: 'Укажіть похідну функції f(x) = (x³ + 1)',
-                img: '',
-                variant: ['f`(x) = 4x³ + 1', 'f`(x) = 4x³', 'f`(x) = 3x²', 'f`(x) = 3x² + 1', 'f`(x) = (x⁵/5 + x²/2)']
-            },
-            // {
-            //     name: 'task_t',
-            //     title: 'На рисунку зображено фрагмент поперечного перерізу стіни (прямокутник KLMN)  з арковим прорізом ABFCD, верхня частина BFC якого є дугою кола радіуса 1м. Відрізки AB і DC перпендикулярні до AD, AB = DC = 2 м. AD = 1,6м, KL = 2,75м. Визначте відстань d від найвищої точки F прорізу до стелі LM.',
-            //     img: 'assets/img/test/4.20.png',
-            //     variant: ['0,25м', '0,3м', '0,4м', '0,35м', '0,45м']
-            // },
-        ]
-    },
-    {
-        id: 5,
-        title: 'Математика ЗНО 2019',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Обчисліть значення виразу 3(a – 1), якщо a = 0,7.',
-                img: '',
-                variant: ['-0,9', '1,1', '5,1', '-0,6', '2,7']
-            },
-            {
-                name: 'task_b',
-                title: 'На рисунку зображено квадрат ABCD. Точки K та M – середини сторін АВ та CD відповідно. Визначте периметр чотирикутника AKMD, якщо периметр заданого квадрата дорівнює 72 см.',
-                img: 'assets/img/test/5.2.png',
-                variant: ['36см', '42см', '48см', '54см', '60см']
-            },
-            {
-                name: 'task_c',
-                title: 'Один кілограм яблук коштує на базарі від 9 грн до 12 грн, а один кілограм груш – від 19 грн до 25 грн. Оксана заплатила за куплені на базарі 2 кг яблук та 3 кг груш m гривень. Укажіть нерівність, що виконуватиметься для m.',
-                img: '',
-                variant: ['28 < m < 37', '18 < m < 75', '75 < m < 99', '42 < m < 66', '75 < m < 81']
-            },
-            {
-                name: 'task_d',
-                title: 'Укажіть рівняння прямої, ескіз графіка якої зображено на рисунку.',
-                img: 'assets/img/test/5.4.png',
-                variant: ['x = 4', 'y = x + 4', 'y = x - 4', 'y = 4', 'y = 4 - x']
-            },
-            {
-                name: 'task_e',
-                title: 'Яке з наведених чисел є коренем рівняння 2|x| = 2?',
-                img: '',
-                variant: ['x = 4', 'x = 2', 'x = 0', 'x = -1', 'x = -2']
-            },
-            {
-                name: 'task_f',
-                title: 'На круговій діаграмі (круг поділено пунктирними лініями на рівні сектори) показано розподіл кількості столів, які продано магазином протягом місяця (див. рисунок). Загальна кількість проданих столів за цей період становила 156. На скільки журнальних столів було продано менше, ніж письмових?',
-                img: 'assets/img/test/5.6.png',
-                variant: ['13', '26', '39', '52', '65']
-            },
-            {
-                name: 'task_g',
-                title: 'Радіус основи конуса дорівнює 4, його висота – h , а твірна – l. Укажіть серед наведених правильне співвідношення для h і l.',
-                img: '',
-                variant: ['16 + h² = l²', '4 + h =l', '16 - h² = l²', 'h² - l² = 16', '8 + h² = l²']
-            },
-            {
-                name: 'task_h',
-                title: 'Розв’яжіть рівняння 3⁷ˣ = 9. Отриманий корінь рівняння округліть до десятих',
-                img: '',
-                variant: ['0,2', '0,29', '0,3', '0,4', '3,5']
-            },
-            {
-                name: 'task_i',
-                title: 'На колі з центром О вибрано точки А та В (див. рисунок). Визначте градусну міру кута АОВ, якщо довжина дуги АВ становить ⅙ довжини цього кола.',
-                img: 'assets/img/test/5.9.png',
-                variant: ['30°', '45°', '60°', '75°', '90°']
-            },
-            {
-                name: 'task_j',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.10.png',
-                variant: ['a¹⁸', 'a³', 'a⁸', 'a⁴', 'a¹⁶']
-            },
-            {
-                name: 'task_k',
-                title: 'Площа основи правильної чотирикутної піраміди дорівнює 36 см². Визначте об’єм цієї піраміди, якщо її висота вдвічі більша за сторону основи.',
-                img: '',
-                variant: ['108см³', '144см³', '219см³', '288см³', '432см³']
-            },
-            {
-                name: 'task_l',
-                title: 'На рисунку зображено графік функції y = f(x), визначеної на проміжку [–3; 2]. Укажіть точку екстремуму функції y = f(x + 3) – 2. ',
-                img: 'assets/img/test/5.12.png',
-                variant: ['x0 = –2', 'x0 = 1', 'x0 = 4', 'x0 = -1', 'x0 = 3']
-            },
-            {
-                name: 'task_m',
-                title: 'У трикутнику АВС кут В – тупий. Які з наведених тверджень є правильними?\n' +
-                'I. ∠А + ∠С < 90°.\n' +
-                'ІІ. АВ + BC < AC.\n' +
-                'IIІ. Центр кола, описаного навколо трикутника АВС, лежить поза його межами',
-                img: '',
-                variant: [' лише I і II', 'лише I', 'лише II і III ', 'I, II і III', 'лише I і III']
-            },
-            {
-                name: 'task_n',
-                title: 'Укажіть нулі функції f(x) = 2x² – 5x – 3',
-                img: '',
-                variant: ['–3; 0', '-3;1/2', '-3', '-1/2;3', '-1;6']
-            },
-            {
-                name: 'task_o',
-                title: 'Якому проміжку належить значення виразу',
-                img: 'assets/img/test/5.15.png',
-                variant: ['(–∞; –2)', '[–2; –1)', '[–1; 0)', '[0; 1)', '[1; +∞)']
-            },
-            {
-                name: 'task_p',
-                title: ' Укажіть проміжок, якому належить корінь рівняння',
-                img: 'assets/img/test/5.16.png',
-                variant: ['(–∞; –2]', '(–2; 0]', '(0; 2]', '(2; 4]', '(4; +∞)']
-            },
-            {
-                name: 'task_q',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.17.png',
-                variant: ['-2√3', '-4', '-2√3+4', '4', '2√3']
-            },
-            {
-                name: 'task_r',
-                title: 'Розв’яжіть нерівність  х³ – 2х < (х + 2)(х² – 2х + 4)',
-                img: '',
-                variant: ['(–4; +∞)', '(–∞; –4)', '(–0,25; +∞)', '(–∞; –0,25)', '(4; +∞)']
-            },
-            {
-                name: 'task_s',
-                title: 'У коробку у формі прямокутного паралелепіпеда щільно укладено у 2 ряди 10 шматочків крейди (див. рисунок 1).\n' +
-                'Кожний шматочок має форму циліндра висотою 10 см і діаметром основи 15 мм (див. рисунок 2).\n' +
-                'Визначте площу плівки, якою в один шар щільно з усіх боків без накладань обгорнуто цю коробку. Місцями з’єднання плівки та товщиною стінок коробки знехтуйте.',
-                img: 'assets/img/test/5.13.png',
-                variant: ['225 см²', '255 см²', '450 см²', '600 см²', '75 см²']
-            },
-            // {
-            //     name: 'task_t',
-            //     title: 'На рисунку зображено графік непарної функції y = f(x), визначеної на проміжку [5; 5]. Яке з наведених співвідношень є справедливим для f(x)?',
-            //     img: 'assets/img/test/5.20.png',
-            //     variant: ['0,25м', '0,3м', '0,4м', '0,35м', '0,45м']
-            // },
-        ]
-    },
-    {
-        id: 6,
-        title: 'Додатковий тест №1',
-        test: [
-            {
-                name: 'task_a',
-                title: 'У буфеті друзі купили кілька однакових тістечок вартістю 10 грн кожне і 5 однакових булочок вартістю х грн. кожна. Яке з чисел може виражати загальну кількість цієї покупки (у грн), якщо х – ціле число?',
-                img: '',
-                variant: ['31', '32', '33', '34', '35']
-            },
-            {
-                name: 'task_b',
-                title: 'Розв’яжіть нерівність  х³ – 2х < (х + 2)(х² – 2х + 4)',
-                img: '',
-                variant: ['(–4; +∞)', '(–∞; –4)', '(–0,25; +∞)', '(–∞; –0,25)', '(4; +∞)']
-            },
-            {
-                name: 'task_c',
-                title: 'Розв’яжіть рівняння 4√x = 1',
-                img: '',
-                variant: ['1/2', '1/8', '16', '-1/2;1/2', '1/16']
-            },
-            {
-                name: 'task_d',
-                title: 'На рисунку зображено прямокутний трикутник з катетами a і b, гіпотенузою c та гострим кутом α. Укажіть правильну рівність.',
-                img: 'assets/img/test/1.8.png',
-                variant: ['cos α = a/b', 'cos α = c/b', 'cos α = a/c', 'cos α = c/a', 'cos α = b/c']
-            },
-            {
-                name: 'task_e',
-                title: 'Розв’яжіть рівняння ',
-                img: 'assets/img/test/3.3.png',
-                variant: ['-3', '-2', '-1,5', '1,5', '2']
-            },
-        ]
-    },
-    {
-        id: 7,
-        title: 'Додатковий тест №2',
-        test: [
-            {
-                name: 'task_a',
-                title: 'На колі з центром О вибрано точки А та В (див. рисунок). Визначте градусну міру кута АОВ, якщо довжина дуги АВ становить ⅙ довжини цього кола.',
-                img: 'assets/img/test/5.9.png',
-                variant: ['30°', '45°', '60°', '75°', '90°']
-            },
-            {
-                name: 'task_b',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.10.png',
-                variant: ['a¹⁸', 'a³', 'a⁸', 'a⁴', 'a¹⁶']
-            },
-            {
-                name: 'task_c',
-                title: 'Площа основи правильної чотирикутної піраміди дорівнює 36 см². Визначте об’єм цієї піраміди, якщо її висота вдвічі більша за сторону основи.',
-                img: '',
-                variant: ['108см³', '144см³', '219см³', '288см³', '432см³']
-            },
-            {
-                name: 'task_d',
-                title: 'На рисунку зображено графік функції y = f(x), визначеної на проміжку [–3; 2]. Укажіть точку екстремуму функції y = f(x + 3) – 2. ',
-                img: 'assets/img/test/5.12.png',
-                variant: ['x0 = –2', 'x0 = 1', 'x0 = 4', 'x0 = -1', 'x0 = 3']
-            },
-            {
-                name: 'task_e',
-                title: 'У трикутнику АВС кут В – тупий. Які з наведених тверджень є правильними?\n' +
-                'I. ∠А + ∠С < 90°.\n' +
-                'ІІ. АВ + BC < AC.\n' +
-                'IIІ. Центр кола, описаного навколо трикутника АВС, лежить поза його межами',
-                img: '',
-                variant: [' лише I і II', 'лише I', 'лише II і III ', 'I, II і III', 'лише I і III']
-            },
-        ]
-    },
-    {
-        id: 8,
-        title: 'Додатковий тест №3',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Укажіть нулі функції f(x) = 2x² – 5x – 3',
-                img: '',
-                variant: ['–3; 0', '-3;1/2', '-3', '-1/2;3', '-1;6']
-            },
-            {
-                name: 'task_b',
-                title: 'Точка А належить площині α. Які з наведених тверджень є правильними?\n' +
-                'I. Через точку А можна провести пряму, перпендикулярну до площини α.\n' +
-                'II. Через точку А можна провести площину, перпендикулярну до площини α.\n' +
-                'III. Через точку А можна провести площину, паралельну площині α.\n',
-                img: '',
-                variant: ['лише І', 'лише II та III', 'лише II', 'лише І та II', 'І,ІІта III']
-            },
-            {
-                name: 'task_c',
-                title: '2(5x + 6) =',
-                img: '',
-                variant: ['10x + 12', '10x + 6', '7x + 8', '7x + 12', '5х+8']
-            },
-            {
-                name: 'task_d',
-                title: 'На рисунку зображено рівнобедрений трикутник АВС (АВ=ВС). Визначте градусну міру кута ВАС, якщо ∠В=40°.',
-                img: 'assets/img/test/1.2.png',
-                variant: ['80°', '70°', '60°', '50°', '40°']
-            },
-            {
-                name: 'task_e',
-                title: 'Укажіть число,що є розв’язком нерівності',
-                img: 'assets/img/test/2.2.png',
-                variant: ['-2', '0', '2', '9', '4']
-            },
-        ]
-    },
-    {
-        id: 9,
-        title: 'Додатковий тест №4',
-        test: [
-            {
-                name: 'task_a',
-                title: '0,4x² ∙ 5x³ = ',
-                img: '',
-                variant: ['2x⁶', '20x⁵', '2x⁵', '0.2x⁵', '0.2x⁶']
-            },
-            {
-                name: 'task_b',
-                title: 'Розв’яжіть систему рівнянь. Якщо(xₒ ; yₒ) – розв’язок цієї системи,то xₒ * yₒ =',
-                img: 'assets/img/test/2.4.png',
-                variant: ['-36', '-14', '-6', '4', '6']
-            },
-            {
-                name: 'task_c',
-                title: 'Екрани телевізорів,зображених на рис.1 і 2, мають форму прямокутників,відповідні сторони яких пропорційні. Діагоналі екранів цих телевізорів дорівнюють відповідно 32 дюйма і 48 дюймів. Визначте, у скілько разів площа екрана телевізора,зображеного на рис. 2, більша за площу телевізора, зображеного на рис. 1.',
-                img: 'assets/img/test/2.14.png',
-                variant: ['в 1,5 раза', 'у 16 разів', 'у 2,56 раза', 'у 4 рази', 'у 2,25 разів']
-            },
-            {
-                name: 'task_d',
-                title: 'Використовуючи формулу Ньютона-Лейбніца обчисліть ',
-                img: 'assets/img/test/2.16.png',
-                variant: ['12', '14', '18', '22', '42']
-            },
-            {
-                name: 'task_e',
-                title: 'На одному з рисунків зображено графік функції у = 1 - х². Укажіть цей рисунок.',
-                img: '',
-                variant: ['assets/img/test/3.11.1.png', 'assets/img/test/3.11.2.png', 'assets/img/test/3.11.3.png', 'assets/img/test/3.11.4.png', 'assets/img/test/3.11.5.png']
-            },
-        ]
-    },
-    {
-        id: 10,
-        title: 'Додатковий тест №5',
-        test: [
-            {
-                name: 'task_a',
-                title: 'В арифметичній прогресії\nВизначте десятий член а10  цієї прогресії.',
-                img: 'assets/img/test/3.13.png',
-                variant: ['-31', '-27', '26', '27', '23']
-            },
-            {
-                name: 'task_b',
-                title: 'На рисунку зображено паралельні прямі a і b та січну CD. Знайдіть відстань між прямими  a і b, якщо СК= 5 см, КD= 2 см, а відстань від точки К до прямої a, дорівнює 1 см.',
-                img: 'assets/img/test/4.11.png',
-                variant: ['2,5см', '3см', '3,5см', '4см', '4,5см']
-            },
-            {
-                name: 'task_c',
-                title: 'Розв’яжіть нерівність',
-                img: 'assets/img/test/4.18.png',
-                variant: ['[ 34,5 ; +∞ ]', '[4; +∞)', '(-∞; 4]', '(-∞; 4,5]', '[4,5; +∞)']
-            },
-            {
-                name: 'task_d',
-                title: ' Укажіть проміжок, якому належить корінь рівняння',
-                img: 'assets/img/test/5.16.png',
-                variant: ['(–∞; –2]', '(–2; 0]', '(0; 2]', '(2; 4]', '(4; +∞)']
-            },
-            {
-                name: 'task_e',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.17.png',
-                variant: ['-2√3', '-4', '-2√3+4', '4', '2√3']
-            },
-            {
-                name: 'task_f',
-                title: 'На рисунку зображено графік функції y = f(x), визначеної на відрізку [-7;7]. Користуючись рисунком, знайдіть f(2).',
-                img: 'assets/img/test/10.6.png',
-                variant: ['-4', '0', '6', '2', '5']
-            },
-            {
-                name: 'task_g',
-                title: '',
-                img: 'assets/img/test/10.7.png',
-                variant: ['-5xy² + 2x²y', '-5xy² - 2x²y', 'xy² - 2x²y', '-6xy² + 2x²y', '-3xy²']
-            },
-            {
-                name: 'task_h',
-                title: 'Задано точки K(0; 1; 0) і M(0; 0; 1). Знайдіть координати вектора KM.',
-                img: '',
-                variant: ['KM (0; 1; 1)', 'KM (0; -1; 1)', 'KM (0; 1; -1)', 'KM (2; 0; 0)', 'KM (0; 0; 0)']
-            },
-            {
-                name: 'task_i',
-                title: 'На координатній площині xy зображено коло, яке дотикається до прямих x=2, x=6 та осі x (див.рисунок). Визначте координати точки, яка є центром цього кола.',
-                img: '',
-                variant: ['(4; 1)', '(6; 2)', '(4; 4)', '(2; 4)', '(4; 2)']
-            },
-            {
-                name: 'task_j',
-                title: 'Розв\'яжіть рівняння',
-                img: 'assets/img/test/10.10.png',
-                variant: ['-2', '-0.4', '2.5', '0.4', '2']
-            },
-        ]
-    },
-    {
-        id: 11,
-        title: 'Додатковий тест №6',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Укажіть похідну функції f(x) = (x³ + 1)',
-                img: '',
-                variant: ['f`(x) = 4x³ + 1', 'f`(x) = 4x³', 'f`(x) = 3x²', 'f`(x) = 3x² + 1', 'f`(x) = (x⁵/5 + x²/2)']
-            },
-            {
-                name: 'task_b',
-                title: 'Укажіть проміжок, якому належить корінь рівняння',
-                img: 'assets/img/test/5.16.png',
-                variant: ['(–∞; –2]', '(–2; 0]', '(0; 2]', '(2; 4]', '(4; +∞)']
-            },
-            {
-                name: 'task_c',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.17.png',
-                variant: ['-2√3', '-4', '-2√3+4', '4', '2√3']
-            },
-            {
-                name: 'task_d',
-                title: 'На рисунку зображено прямокутний трикутник з катетами a і b, гіпотенузою c та гострим кутом α. Укажіть правильну рівність.',
-                img: 'assets/img/test/1.8.png',
-                variant: ['cos α = a/b', 'cos α = c/b', 'cos α = a/c', 'cos α = c/a', 'cos α = b/c']
-            },
-            {
-                name: 'task_e',
-                title: 'Випущено партію з 300 лотерейних білетів. Імовірність того, що навмання вибраний білет із цієї партії буде виграшним, дорівнює 0,2. Визначте кількість білетів без виграшу серед цих 300 білетів.',
-                img: '',
-                variant: ['6', '60', '294', '150', '240']
-            },
-            {
-                name: 'task_f',
-                title: 'Розв’яжіть систему рівнянь. Для одержаного розв’язку (xₒ ; yₒ) системи обчисліть суму xₒ + yₒ.',
-                img: 'assets/img/test/1.13.png',
-                variant: ['11', '21', '-7', '-10', '-14']
-            },
-            {
-                name: 'task_g',
-                title: 'Розв’яжіть рівняння (|x|/10) = 2',
-                img: '',
-                variant: ['-5;5', '-20;20', '20', '5', '-0,2;0,2']
-            },
-            {
-                name: 'task_h',
-                title: 'Графіком однієї з наведених функцій є пряма. Укажіть цю функцію.',
-                img: '',
-                variant: ['y = 2ͯ', 'y = x² - 2x', 'y = cos(2x)', 'y = 2x', 'y = 2/x']
-            },
-            {
-                name: 'task_i',
-                title: 'Якому значенню серед на ведених може дорівнювати довжина сторони АС трикутника  АВС, якщо АВ = 3 см,ВС = 10см ?',
-                img: '',
-                variant: ['3 см', '5 см', '7 см', '11 см', '15 см']
-            },
-            {
-                name: 'task_j',
-                title: '1 - sinα * Ctgα * cosα =',
-                img: '',
-                variant: ['cos2α', '1-sin2α', '0', 'cos²α', 'sin²α']
-            },
-        ]
-    },
-    {
-        id: 12,
-        title: 'Додатковий тест №7',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Розв\'яжіть систему .\n Якщо (xₒ ; yₒ) — розв\'язок цієї системи, то xₒ =',
-                img: 'assets/img/test/12.1.png',
-                variant: ['-24', '36', '4.8', '7.2', '-36']
-            },
-            {
-                name: 'task_b',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/12.2.png',
-                variant: ['a(a − 1)', '−a³', '−a(a + 1)', '(a+1)/a', 'a(a + 1)']
-            },
-            {
-                name: 'task_c',
-                title: 'На якому з рисунків зображено фрагмент графіка функції y = cos(x + 2π) на проміжку',
-                img: 'assets/img/test/12.3.png',
-                variant: ['assets/img/test/12.3.1.png', 'assets/img/test/12.3.2.png', 'assets/img/test/12.3.3.png', 'assets/img/test/12.3.4.png', 'assets/img/test/12.3.5.png']
-            },
-            {
-                name: 'task_d',
-                title: 'Розв\'яжіть нерівність x³ ≥ x²',
-                img: '',
-                variant: ['(−∞; 0] ∪ [1; +∞)', '[0; 1]', '[1; +∞)', '{ 0 } ∪ [1; +∞)', '[−1; +∞)']
-            },
-            {
-                name: 'task_e',
-                title: 'Обчисліть значення виразу 4sin²α, якщо 4cos²α = 1.',
-                img: '',
-                variant: ['3', '3/4', '1/4', '4', '0']
-            },
-            {
-                name: 'task_f',
-                title: 'Спростіть вираз ',
-                img: 'assets/img/test/3.7.png',
-                variant: ['-1', 'а - 4', 'а + 4', '1', '(а - 4)²']
-            },
-            {
-                name: 'task_g',
-                title: 'Усі зображені на рисунку прямі лежать в одній площині, прямі mine паралельними. Визначте градусну міру кута α',
-                img: 'assets/img/test/3.8.png',
-                variant: ['20°', '50°', '60°', '70°', '110°']
-            },
-            {
-                name: 'task_h',
-                title: 'Укажіть похідну функції f(x) = (x³ + 1)',
-                img: '',
-                variant: ['f`(x) = 4x³ + 1', 'f`(x) = 4x³', 'f`(x) = 3x²', 'f`(x) = 3x² + 1', 'f`(x) = (x⁵/5 + x²/2)']
-            },
-            {
-                name: 'task_i',
-                title: 'На круговій діаграмі (круг поділено пунктирними лініями на рівні сектори) показано розподіл кількості столів, які продано магазином протягом місяця (див. рисунок). Загальна кількість проданих столів за цей період становила 156. На скільки журнальних столів було продано менше, ніж письмових?',
-                img: 'assets/img/test/5.6.png',
-                variant: ['13', '26', '39', '52', '65']
-            },
-            {
-                name: 'task_j',
-                title: 'Якому проміжку належить значення виразу',
-                img: 'assets/img/test/5.15.png',
-                variant: ['(–∞; –2)', '[–2; –1)', '[–1; 0)', '[0; 1)', '[1; +∞)']
-            },
-        ]
-    },
-    {
-        id: 13,
-        title: 'Додатковий тест №8',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Спростіть вираз a(a+2b)-(a+b)²',
-                img: '',
-                variant: ['4ab+b²', '4ab-b²', '-b²', '2ab-b²', 'b²']
-            },
-            {
-                name: 'task_b',
-                title: 'На рисунку зображено паралельні прямі a і b та січну CD. Знайдіть відстань між прямими  a і b, якщо СК= 5 см, КD= 2 см, а відстань від точки К до прямої a, дорівнює 1 см.',
-                img: 'assets/img/test/4.11.png',
-                variant: ['2,5см', '3см', '3,5см', '4см', '4,5см']
-            },
-            {
-                name: 'task_c',
-                title: 'Число а в 5 разів більше за додатне число b. Тоді а =',
-                img: '',
-                variant: ['b – 5', '5/b', 'b + 5', '5b', 'b/5']
-            },
-            {
-                name: 'task_d',
-                title: 'Визначте градусну міру кута В трикутника АВС, якщо ∠А + ∠С = 70°',
-                img: '',
-                variant: ['20°', '70°', '110°', '145°', '160°']
-            },
-            {
-                name: 'task_e',
-                title: 'Розв’яжіть рівняння 4x² = 1.',
-                img: '',
-                variant: ['–2; 2', '2', '0.25', '0.5', '–0,5; 0,5']
-            },
-            {
-                name: 'task_f',
-                title: 'На одному з рисунків зображено ескіз графіка функції y = √x. Укажіть цей рисунок',
-                img: '',
-                variant: ['assets/img/test/13.6.png', 'assets/img/test/13.6.2.png', 'assets/img/test/13.6.3.png', 'assets/img/test/13.6.4.png', 'assets/img/test/13.6.5.png']
-            },
-            {
-                name: 'task_g',
-                title: 'Розв’яжіть систему рівнянь\n Якщо (xₒ ; yₒ) – розв’язок цієї системи, то xₒ + yₒ =',
-                img: 'assets/img/test/13.7.png',
-                variant: ['–7', '7', '-1', '8', '-8']
-            },
-            {
-                name: 'task_h',
-                title: 'Укажіть функцію, графіком якої є парабола з вершиною в точці (–2; 0)',
-                img: '',
-                variant: ['y = x² − 2', 'y = (x - 2)²', 'y = (x + 2)²', 'y = - 2x²', 'y = x² + 2']
-            },
-            {
-                name: 'task_i',
-                title: 'Пряма b не має спільних точок з площиною α. Які з наведених тверджень є правильними?\n' +
-                'І. Через пряму b можна провести лише одну площину, перпендикулярну\n' +
-                'до площини α.\n' +
-                'ІІ. Через пряму b можна провести лише одну площину, паралельну площині α.\n' +
-                'ІІІ. У площині α можна провести лише одну пряму, паралельну прямій b.',
-                img: '',
-                variant: ['лише І', 'лише ІІ', 'лише І і ІІ', 'лише ІІ і ІІІ', 'І, ІІ і ІІІ']
-            },
-            {
-                name: 'task_j',
-                title: 'У трикутнику АВС: ∠А = 65°, BD – бісектриса кута В (див. рисунок). Знайдіть градусну міру кута ВСА, якщо ∠ABD = 35°. ',
-                img: 'assets/img/test/13.10.png',
-                variant: ['35°', '45°', '50°', '55°', '80°']
-            },
-        ]
-    },
-    {
-        id: 14,
-        title: 'Додатковий тест №9',
-        test: [
-            {
-                name: 'task_a',
-                title: 'Спростіть вираз 1/(1+tg²α)',
-                img: '',
-                variant: ['cos²α', 'sin²α', 'tg²α', 'Ctg²α', '1']
-            },
-            {
-                name: 'task_b',
-                title: '',
-                img: 'assets/img/test/2.13.png',
-                variant: ['3', '3,3', '0,25', '4', '1']
-            },
-            {
-                name: 'task_c',
-                title: 'Задано арифметичну прогресію(a_n),у якій різниця d = 0,5, п’ятнадцятий член a_15 = 12.Визначте перший член прогресії a_1.',
-                img: '',
-                variant: ['24', '12,5', '6', '5', '4,5']
-            },
-            {
-                name: 'task_d',
-                title: 'У буфеті друзі купили кілька однакових тістечок вартістю 10 грн кожне і 5 однакових булочок вартістю х грн. кожна. Яке з чисел може виражати загальну кількість цієї покупки (у грн), якщо х – ціле число?',
-                img: '',
-                variant: ['31', '32', '33', '34', '35']
-            },
-            {
-                name: 'task_e',
-                title: 'На рисунку зображено графік функції y=f(x), визначеної на проміжку [–4; 6]. Укажіть найбільше значення функції f на цьому проміжку.',
-                img: 'assets/img/test/4.4.png',
-                variant: ['-4', '3', '4', '5', '6']
-            },
-            {
-                name: 'task_f',
-                title: 'В арифметичній прогресії\nВизначте десятий член а10  цієї прогресії.',
-                img: 'assets/img/test/3.13.png',
-                variant: ['-31', '-27', '26', '27', '23']
-            },
-            {
-                name: 'task_g',
-                title: 'Розв’яжіть нерівність log2 х < b, використавши рисунок',
-                img: 'assets/img/test/3.15.png',
-                variant: ['assets/img/test/3.15.1.png', 'assets/img/test/3.15.2.png', 'assets/img/test/3.15.3.png', 'assets/img/test/3.15.4.png', 'assets/img/test/3.15.5.png']
-            },
-            {
-                name: 'task_h',
-                title: 'Розв’яжіть нерівність (x² + 64)(x - 5) > 0.',
-                img: '',
-                variant: ['(5; +∞)', '(-∞; 5)U(5;+∞)', '(5;8)', '(-∞5)U(8; +∞)', '(-∞; 5)']
-            },
-            {
-                name: 'task_i',
-                title: 'У коробку у формі прямокутного паралелепіпеда щільно укладено у 2 ряди 10 шматочків крейди (див. рисунок 1).\n' +
-                'Кожний шматочок має форму циліндра висотою 10 см і діаметром основи 15 мм (див. рисунок 2).\n' +
-                'Визначте площу плівки, якою в один шар щільно з усіх боків без накладань обгорнуто цю коробку. Місцями з’єднання плівки та товщиною стінок коробки знехтуйте.',
-                img: 'assets/img/test/5.13.png',
-                variant: ['225 см²', '255 см²', '450 см²', '600 см²', '75 см²']
-            },
-            {
-                name: 'task_j',
-                title: 'Спростіть вираз',
-                img: 'assets/img/test/5.17.png',
-                variant: ['-2√3', '-4', '-2√3+4', '4', '2√3']
-            },
+        title: 'Англійська мова ЗНО 2017',
+        tests: [
+            {
+                text: `<p>Spatulatta<br>
+Ding, ding! When you visit the website Spatulatta: Cooking 4 Kids Online, a cheery bell
+signals that the fun is about to begin. Isabella and Olivia Gerasole of Chicago, Illinois, use
+the power of video to teach kids how to prepare tasty recipes. The cool thing is, the sisters
+are kids themselves. When last year they won for their website a James Beard Foundation
+award, named after a world-famous chef, these grade-schoolers became the youngest cooks
+ever to receive recognition from the group.
+The idea for the website came from their neighbour, film producer Gaylon Emerzian.
+Isabella, 11, says when Emerzian asked the sisters if they’d like to help with a cooking
+website for kids, they knew right away that it would be fun. “We could do a website
+ourselves at home and reach kids all around the world”, Isabella says. “We get recipes and
+fan mail from lots of different countries.”
+The sisters film new segments every two weeks. They set aside four or five hours to work, often while the neighbourhood 
+kids are outside playing, and have learned a lot about lighting, filming, and editing. 
+“The sacrifice is worth it”, says Isabella. 
+“Sometimes it is hard to fit in, but when you see your finished work on the website, it is the greatest feeling!”
+
+Olivia, 9, has this advice: “If you mess up, it is just fine. I mess up all the time!” She says she’s short and often can’t reach bowls to stir properly. She’s learned to use a stool and keep trying, “Mess-ups can be frustrating, but you’ll get it some time!”
+Since winning the award, the girls have been interviewed by television, radio, and newspaper
+reporters. They’ve learned that hard work can not only turn out to be fun, but can lead to
+surprising results. Isabella and Olivia have also learned that one good idea can lead to
+another. Their new cookbook will roll off the presses this fall.</p>`,
+                tasks: [
+                    {
+                        name: 'task_a',
+                        title: 'According to paragraph 1__',
+                        img: '',
+                        variant: ['James Beard inspired Isabella and Olivia Gerasole',
+                            'the sisters got a prize for their humorous programme',
+                            'James Beard is the chief manager of the Foundation',
+                            'the girls show how to cook delicious dishes via the Internet']
+                    },
+                    {
+                        name: 'task_b',
+                        title: 'It is stated in paragraph 2 that__',
+                        img: '',
+                        variant: ['it took the girls some time to agree to Emerzian’s proposal',
+                            'the sisters get funny recipes from their neighbours',
+                            'Isabella and Olivia have organized their own cooking competition',
+                            'the girls are enjoying international popularity']
+                    },
+                    {
+                        name: 'task_c',
+                        title: 'In paragraph 3 the author says that the sisters__',
+                        img: '',
+                        variant: ['make three new issues a month',
+                            'regret the time spent on the work',
+                            'have gained filming experience',
+                            'dislike playing with little kids']
+                    },
+                    {
+                        name: 'task_d',
+                        title: 'Which of the following is TRUE about Olivia?',
+                        img: '',
+                        variant: ['She cooks with neighbourhood children. ',
+                            'She can cook few dishes because of her height.',
+                            'She has got to know a lot about film making.',
+                            'She spends hours per week answering fan mail.']
+                    },
+                    {
+                        name: 'task_e',
+                        title: 'Which of the following is NOT mentioned among the results of the girls’ work?',
+                        img: '',
+                        variant: ['getting interest from the mass media',
+                            'getting money and recognition',
+                            'getting their work published',
+                            'getting valuable life experience']
+                    }
+                ]
+            },
+            {
+                text: `<p>One of my (33) _____ memorable summers was my trip down under to New Zealand and Australia when I had the opportunity to be a part of the People to People Student Exchange program.
+Our delegation’s twenty-day stay (34) _____ with action-packed thrills from diving on the Great Barrier Reef to nature hikes in the tropics of New Zealand. Our group also travelled to a Maori village where we (35) _____ overnight learning about the native tribal rituals, dances, customs, and beliefs.
+The trip also included museum visits, long flights and bus rides. I quickly felt (36) _____ home with the new friends I met from my own delegation. I am still closely involved with many friends from the trip. If you (37) _____ a chance to be involved with the People to People summer programs, I highly recommend doing it.</p>`,
+                tasks: [
+                    {
+                        name: 'task_f',
+                        title: '33',
+                        img: '',
+                        variant: ['the more',
+                            'the most',
+                            'most',
+                            'much',
+                        ]
+                    },
+                    {
+                        name: 'task_g',
+                        title: '34',
+                        img: '',
+                        variant: ['fill',
+                            'was filled',
+                            'filling',
+                            'has filled',
+                        ]
+                    },
+                    {
+                        name: 'task_h',
+                        title: '35',
+                        img: '',
+                        variant: ['would stay',
+                            'stayed',
+                            'had stayed',
+                            'were stayed',
+                        ]
+                    },
+                    {
+                        name: 'task_i',
+                        title: '36',
+                        img: '',
+                        variant: ['inside',
+                            'of',
+                            'in',
+                            'at',
+                        ]
+                    },
+                    {
+                        name: 'task_j',
+                        title: '37',
+                        img: '',
+                        variant: ['got', 'will get', 'get', 'has got']
+                    },
+                ]
+            },
+            {
+                text: `<p>In March this year, Peter John Rigby, 73, from Skipton, (38)_____ reading for more than ten seconds by North Yorkshire Police’s mobile (39)_____ camera on Beamsley Hill.
+Mr. Rigby pleaded guilty to dangerous driving and was fined £1,080. In addition to (40)_____ for 12 months, he was ordered to take an extended driving test.
+Dave Brown, Team Manager, said: “Those 10 seconds (41)_____ have been disastrous for him or other road users. This case demonstrates the clear evidence captured by the camera and should serve as a reminder to other road users of the potential consequences if they (42)_____ to take unnecessary and dangerous risks.”</p>`,
+                tasks: [
+                    {
+                        name: 'task_k',
+                        title: '38',
+                        img: '',
+                        variant: ['has seen',
+                            'was seen',
+                            'was seeing',
+                            'has been seen',
+                        ]
+                    },
+                    {
+                        name: 'task_l',
+                        title: '39',
+                        img: '',
+                        variant: ['safety',
+                            'save',
+                            'safe',
+                            'safely',
+                        ]
+                    },
+                    {
+                        name: 'task_m',
+                        title: '40',
+                        img: '',
+                        variant: ['be banning',
+                            'banning',
+                            'ban',
+                            'being banned',
+                        ]
+                    },
+                    {
+                        name: 'task_n',
+                        title: '41',
+                        img: '',
+                        variant: ['must',
+                            'should',
+                            'could',
+                            'ought',
+                        ]
+                    },
+                    {
+                        name: 'task_o',
+                        title: '42',
+                        img: '',
+                        variant: ['choose', 'chooses', 'had chosen', 'will choose']
+                    },
+                ]
+            }
         ]
     },
 ];

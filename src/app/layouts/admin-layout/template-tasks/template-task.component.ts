@@ -5,6 +5,7 @@ import {CountService} from '../../../services/count.service';
 import * as moment from 'moment';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Answer} from "../../../../assets/allTests/test-answer";
+import {StepState} from "@angular/cdk/stepper";
 
 @Component({
     selector: 'app-template-task',
@@ -13,7 +14,7 @@ import {Answer} from "../../../../assets/allTests/test-answer";
 })
 export class TemplateTaskComponent implements OnInit, OnDestroy {
 
-    test: any = [];
+    tests: any = [];
     nameTest: string = '';
     answer: any = [];
     userAnswer: any = [];
@@ -21,6 +22,7 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
     counter: string = '';
     time: number = 0;
     timer: any;
+    text: string;
 
     constructor(public dialog: MatDialog,
                 public router: Router,
@@ -30,17 +32,14 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         window.scroll(0, 0);
-        window.addEventListener('beforeunload', (event) => {
-            event.preventDefault();
-            event.returnValue = '';
-        });
-        this.test = this.route.snapshot.data['data']['test'];
+        // window.addEventListener('beforeunload', (event) => {
+        //     this.router.navigateByUrl('/test');
+        //     event.preventDefault();
+        //     event.returnValue = '';
+        // });
+        this.tests = this.route.snapshot.data['data']['tests'];
         this.nameTest = this.route.snapshot.data['data']['title'];
-        if (this.test.length === 5){
-            this.time = 120;
-        } else if (this.test.length === 10){
-            this.time = 420;
-        } else this.time = (this.test.length * 1.2) * 60;
+        this.time = (this.tests.length * 5) * 60;
         Answer.forEach(item => {
             if (item.id === this.route.snapshot.data['data']['id']){
                 this.answer = item.answer;
@@ -103,7 +102,7 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
                 id: this.route.snapshot.data['data']['id'],
                 userAnswer: this.userAnswer,
                 rightAnswer: this.answer,
-                test: this.test,
+                test: this.tests,
                 title: this.route.snapshot.data['data']['title'],
                 value: this.countService.dataTest(this.evaluation, this.answer.length)
             });
@@ -125,7 +124,7 @@ export class TemplateTaskComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(){
         clearInterval(this.timer);
-        window.removeEventListener('beforeunload', () => {});
+        // window.removeEventListener('beforeunload', () => {});
         this.countService.next = false
     }
 }

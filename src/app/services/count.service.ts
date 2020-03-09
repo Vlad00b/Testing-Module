@@ -28,6 +28,10 @@ export class CountService {
             titleTest: test.title,
             value: test.value
         };
+        statistic.nameTest.forEach(item => {
+            item.userAnswer = [];
+            item.rightAnswer = [];
+        });
         this.testStatistic = JSON.parse(localStorage.getItem('tests'));
         if (this.testStatistic == null) {
             this.testStatistic = [];

@@ -1,6 +1,6 @@
 <div class="main-content">
     <mat-toolbar color="primary" class="fixed-top">
-        <mat-toolbar-row >
+        <mat-toolbar-row>
             <span>{{nameTest}}</span>
             <span class="align-center">{{counter}}</span>
         </mat-toolbar-row>
@@ -8,33 +8,28 @@
     <div class="container-fluid margin-container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card" *ngFor="let task of test">
-                    <div class="card-header card-header-tabs card-header-success">
+                <div class="card" *ngFor="let test of tests">
+                    <div class="card-header card-header-tabs card-header-custom">
                         <div class="task-title">
-                            <div *ngIf="task.title"><span class="nav-tabs-title">{{task.title}}</span></div>
-                            <div><img src="{{task.img}}"></div>
+                            <div><span class="nav-tabs-title" innerHTML="{{test.text}}"></span></div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table" *ngFor="let select of task.variant">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <div class="form-check form-check-radio">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="{{task.name}}"
-                                                   value="{{select}}" (change)="getValue(task.name, select)">
-                                            <img src="{{select}}" *ngIf="select.startsWith('assets/')">
-                                            <p *ngIf="!select.startsWith('assets/')">{{select}}</p>
-                                            <span class="circle">
+                        <mat-horizontal-stepper>
+                            <mat-step *ngFor="let task of test.tasks" completed="false">
+                                <ng-template matStepLabel>{{task.title}}</ng-template>
+                                <div class="form-check form-check-radio" *ngFor="let select of task.variant">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="{{task.name}}"
+                                               value="{{select}}" (change)="getValue(task.name, select)">
+                                        <p>{{select}}</p>
+                                        <span class="circle">
                                                 <span class="check"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                        </span>
+                                    </label>
+                                </div>
+                            </mat-step>
+                        </mat-horizontal-stepper>
                     </div>
                 </div>
             </div>

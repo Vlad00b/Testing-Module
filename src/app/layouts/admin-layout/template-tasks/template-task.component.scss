@@ -1,26 +1,24 @@
-.table{
-  width: 0;
-  margin-bottom: 0;
-}
-
-.card .form-check{
+.card .form-check {
   margin-top: 0;
 }
 
-.task-title{
+.task-title {
   display: flex;
   justify-content: space-between;
 }
 
 .card {
   margin-bottom: 50px;
+  &-header-custom {
+    background: linear-gradient(60deg, #5d8684, #1c1525);
+  }
 }
 
-.margin-container{
+.margin-container {
   margin-top: 75px;
   margin-bottom: 30px;
 }
 
-.align-center{
+.align-center {
   margin: 0 30%;
 }
